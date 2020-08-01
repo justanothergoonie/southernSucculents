@@ -1,0 +1,331 @@
+/* Imports ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	background-color: #f7f3f2;
+	height: 100%;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 32px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: 0.03em;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 0.8rem;
+}
+
+p {
+	line-height: 2em;
+}
+
+ul,
+ol,
+a {
+	line-height: 2em;
+	color: #435a5c;
+}
+
+ol li {
+	list-style: decimal;
+	color: #435a5c;
+}
+
+a {
+	color: #435a5c;
+	text-decoration: none;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+	header {
+		justify-content: center;
+	}
+}
+
+header .mobile-only-container {
+	display: flex;
+	position: fixed;
+	right: 1rem;
+	top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+	header .mobile-only-container {
+		display: none;
+	}
+}
+
+header .mobile-only-container img {
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	right: 4.5rem;
+	top: -0.2rem;
+}
+
+header .mobile-only-container .hamburger {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	color: #f7f3f2;
+	border: none;
+}
+
+header .mobile-only-container .hamburger .line {
+	width: 75%;
+	height: 12%;
+	margin: 10%;
+	background-color: black;
+}
+
+header .logo {
+	width: 200px;
+	align-self: center;
+	position: relative;
+	top: 1.5rem;
+}
+
+header nav {
+	display: block;
+	position: fixed;
+	right: 1rem;
+	top: 5rem;
+	max-width: 0px;
+	overflow: hidden;
+}
+
+header nav ul {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+}
+
+header nav ul li a {
+	display: flex;
+	flex-direction: column;
+	line-height: 3rem;
+	padding: 10px 0px;
+}
+
+header nav ul li a .cart {
+	display: none;
+}
+
+header nav.showing {
+	max-width: 1000px;
+}
+
+@media screen and (min-width: 768px) {
+	header nav {
+		display: block;
+		position: relative;
+		top: -6.5rem;
+		max-width: 100%;
+	}
+	header nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	header nav ul div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		width: 40%;
+	}
+	header nav ul div li {
+		margin: 0px 20px;
+	}
+	header nav ul div li a {
+		font-size: 1.5rem;
+		display: flex;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		align-items: baseline;
+		flex-direction: row;
+	}
+	header nav ul div li a .cart {
+		margin-left: 10px;
+		width: 25px;
+		height: 25px;
+		display: block;
+	}
+}
+
+/*# sourceMappingURL=main.css.map */
