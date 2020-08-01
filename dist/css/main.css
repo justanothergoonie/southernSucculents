@@ -258,6 +258,7 @@ header .logo {
 	align-self: center;
 	position: relative;
 	top: 1.5rem;
+	z-index: 100;
 }
 
 header nav {
@@ -287,7 +288,7 @@ header nav ul li a .cart {
 }
 
 header nav.showing {
-	max-width: 1000px;
+	max-width: 100%;
 }
 
 @media screen and (min-width: 768px) {
