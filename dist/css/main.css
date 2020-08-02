@@ -269,6 +269,7 @@ header nav {
 	top: 5rem;
 	max-width: 0px;
 	overflow: hidden;
+	z-index: 1000;
 }
 
 header nav ul {
@@ -282,6 +283,7 @@ header nav ul li a {
 	flex-direction: column;
 	line-height: 3rem;
 	padding: 10px 0px;
+	text-shadow: 2px 2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, -2px -2px 0 #ffffff, 2px 0px 0 #ffffff, 0px 2px 0 #ffffff, -2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 2px 2px 0px rgba(0, 0, 0, 0);
 }
 
 header nav ul li a .cart {
@@ -321,6 +323,7 @@ header nav.showing {
 		justify-content: center;
 		align-items: baseline;
 		flex-direction: row;
+		text-shadow: none;
 	}
 	header nav ul div li a .cart {
 		margin-left: 10px;
@@ -384,6 +387,302 @@ header nav.showing {
 	margin: 30px;
 	font-size: 1.2rem;
 	text-align: center;
+}
+
+.wedding-events {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.wedding-events .skewed-header {
+	padding: 30px 0px;
+}
+
+.wedding-events .skewed-header div {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.wedding-events .skewed-header div h2 {
+	font-size: 2.5rem;
+}
+
+.wedding-events .skewed-header div span {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.wedding-events .skewed-header div span {
+		display: block;
+	}
+}
+
+.wedding-events .skewed-tag {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	-ms-transform: skew(-25deg, 0deg);
+	    transform: skew(-25deg, 0deg);
+	width: 100px;
+	background-color: #fa4407;
+	width: 230px;
+	height: 90px;
+}
+
+.wedding-events .skewed-tag div {
+	color: #fff;
+	-ms-transform: skew(25deg, 0deg);
+	    transform: skew(25deg, 0deg);
+}
+
+.wedding-events .skewed-tag div .bp-med-only {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.wedding-events .skewed-tag div .bp-med-only {
+		display: block;
+	}
+}
+
+.dish-gardens {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.dish-gardens .skewed-header {
+	padding: 30px 0px;
+}
+
+.dish-gardens .skewed-header div {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.dish-gardens .skewed-header div h2 {
+	font-size: 2.5rem;
+}
+
+.dish-gardens .skewed-header div span {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.dish-gardens .skewed-header div span {
+		display: block;
+	}
+}
+
+.dish-gardens .skewed-tag {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	-ms-transform: skew(-25deg, 0deg);
+	    transform: skew(-25deg, 0deg);
+	width: 100px;
+	background-color: #fda50d;
+	width: 230px;
+	height: 90px;
+}
+
+.dish-gardens .skewed-tag div {
+	color: #fff;
+	-ms-transform: skew(25deg, 0deg);
+	    transform: skew(25deg, 0deg);
+}
+
+.dish-gardens .skewed-tag div .bp-med-only {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.dish-gardens .skewed-tag div .bp-med-only {
+		display: block;
+	}
+}
+
+.vertical-gardens {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.vertical-gardens .skewed-header {
+	padding: 30px 0px;
+}
+
+.vertical-gardens .skewed-header div {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.vertical-gardens .skewed-header div h2 {
+	font-size: 2.5rem;
+}
+
+.vertical-gardens .skewed-header div span {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.vertical-gardens .skewed-header div span {
+		display: block;
+	}
+}
+
+.vertical-gardens .skewed-tag {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	-ms-transform: skew(-25deg, 0deg);
+	    transform: skew(-25deg, 0deg);
+	width: 100px;
+	background-color: #6e352d;
+	width: 230px;
+	height: 90px;
+}
+
+.vertical-gardens .skewed-tag div {
+	color: #fff;
+	-ms-transform: skew(25deg, 0deg);
+	    transform: skew(25deg, 0deg);
+}
+
+.vertical-gardens .skewed-tag div .bp-med-only {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.vertical-gardens .skewed-tag div .bp-med-only {
+		display: block;
+	}
+}
+
+.shop-by {
+	padding: 100px 0px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.shop-by .line {
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	z-index: 0;
+}
+
+.shop-by .all-shop-container {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	font-size: 1.5rem;
+}
+
+.shop-by .all-shop-container .first-set-container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.shop-by .all-shop-container .first-set-container .first-shop .skewed-tag {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	-ms-transform: skew(25deg, 0deg);
+	    transform: skew(25deg, 0deg);
+	width: 200px;
+	height: 50px;
+	color: #fff;
+	background-color: #fa4407;
+}
+
+.shop-by .all-shop-container .first-set-container .first-shop .skewed-tag .unskewed-text {
+	-ms-transform: skew(-25deg, 0deg);
+	    transform: skew(-25deg, 0deg);
+}
+
+.shop-by .all-shop-container .first-set-container .second-shop .skewed-tag {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	-ms-transform: skew(-25deg, 0deg);
+	    transform: skew(-25deg, 0deg);
+	width: 200px;
+	height: 50px;
+	color: #fff;
+	background-color: #4b858c;
+}
+
+.shop-by .all-shop-container .first-set-container .second-shop .skewed-tag .unskewed-text {
+	-ms-transform: skew(25deg, 0deg);
+	    transform: skew(25deg, 0deg);
+}
+
+.shop-by .all-shop-container .second-set-container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.shop-by .all-shop-container .second-set-container .third-shop .skewed-tag {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	-ms-transform: skew(25deg, 0deg);
+	    transform: skew(25deg, 0deg);
+	width: 200px;
+	height: 50px;
+	color: #000;
+	background-color: #fda50d;
+}
+
+.shop-by .all-shop-container .second-set-container .third-shop .skewed-tag .unskewed-text {
+	-ms-transform: skew(-25deg, 0deg);
+	    transform: skew(-25deg, 0deg);
+}
+
+.shop-by .all-shop-container .second-set-container .fourth-shop .skewed-tag {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	-ms-transform: skew(-25deg, 0deg);
+	    transform: skew(-25deg, 0deg);
+	width: 200px;
+	height: 50px;
+	color: #000;
+	background-color: #a1bbab;
+}
+
+.shop-by .all-shop-container .second-set-container .fourth-shop .skewed-tag .unskewed-text {
+	-ms-transform: skew(25deg, 0deg);
+	    transform: skew(25deg, 0deg);
 }
 
 /*# sourceMappingURL=main.css.map */

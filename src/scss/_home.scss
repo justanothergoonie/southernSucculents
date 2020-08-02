@@ -55,6 +55,7 @@ header {
 		top: 5rem;
 		max-width: 0px;
 		overflow: hidden;
+		z-index: 1000;
 		ul {
 			display: flex;
 			flex-direction: column;
@@ -65,6 +66,11 @@ header {
 					flex-direction: column;
 					line-height: 3rem;
 					padding: 10px 0px;
+					text-shadow: 2px 2px 0 #ffffff, 2px -2px 0 #ffffff,
+						-2px 2px 0 #ffffff, -2px -2px 0 #ffffff,
+						2px 0px 0 #ffffff, 0px 2px 0 #ffffff, -2px 0px 0 #ffffff,
+						0px -2px 0 #ffffff, 2px 2px 0px rgba(0, 0, 0, 0);
+
 					.cart {
 						display: none;
 					}
@@ -96,6 +102,7 @@ header {
 							@include flex-center;
 							align-items: baseline;
 							flex-direction: row;
+							text-shadow: none;
 							.cart {
 								margin-left: 10px;
 								width: 25px;
@@ -153,6 +160,211 @@ header {
 				margin: 30px;
 				font-size: 1.2rem;
 				text-align: center;
+			}
+		}
+	}
+}
+.wedding-events {
+	@include flex-center;
+	flex-direction: column;
+	// img{
+	// }
+	.skewed-header {
+		padding: 30px 0px;
+		div {
+			@include flex-center;
+			flex-direction: column;
+			h2 {
+				font-size: 2.5rem;
+			}
+			span {
+				display: none;
+				@include bp-med {
+					display: block;
+				}
+			}
+		}
+	}
+	.skewed-tag {
+		@include flex-center;
+		transform: skew(-25deg, 0deg);
+		width: 100px;
+		background-color: #fa4407;
+		width: 230px;
+		height: 90px;
+		div {
+			color: #fff;
+			transform: skew(25deg, 0deg);
+
+			.bp-med-only {
+				display: none;
+				@include bp-med {
+					display: block;
+				}
+			}
+		}
+	}
+}
+.dish-gardens {
+	@include flex-center;
+	flex-direction: column;
+	// img{
+	// }
+	.skewed-header {
+		padding: 30px 0px;
+		div {
+			@include flex-center;
+			flex-direction: column;
+			h2 {
+				font-size: 2.5rem;
+			}
+			span {
+				display: none;
+				@include bp-med {
+					display: block;
+				}
+			}
+		}
+	}
+	.skewed-tag {
+		@include flex-center;
+		transform: skew(-25deg, 0deg);
+		width: 100px;
+		background-color: #fda50d;
+		width: 230px;
+		height: 90px;
+		div {
+			color: #fff;
+			transform: skew(25deg, 0deg);
+
+			.bp-med-only {
+				display: none;
+				@include bp-med {
+					display: block;
+				}
+			}
+		}
+	}
+}
+.vertical-gardens {
+	@include flex-center;
+	flex-direction: column;
+	// img{
+	// }
+	.skewed-header {
+		padding: 30px 0px;
+		div {
+			@include flex-center;
+			flex-direction: column;
+			h2 {
+				font-size: 2.5rem;
+			}
+			span {
+				display: none;
+				@include bp-med {
+					display: block;
+				}
+			}
+		}
+	}
+	.skewed-tag {
+		@include flex-center;
+		transform: skew(-25deg, 0deg);
+		width: 100px;
+		background-color: #6e352d;
+		width: 230px;
+		height: 90px;
+		div {
+			color: #fff;
+			transform: skew(25deg, 0deg);
+
+			.bp-med-only {
+				display: none;
+				@include bp-med {
+					display: block;
+				}
+			}
+		}
+	}
+}
+.shop-by {
+	padding: 100px 0px;
+	@include flex-center;
+	flex-direction: column;
+	.line {
+		width: 100%;
+		height: 1px;
+		background-color: #000;
+		z-index: 0;
+	}
+	.all-shop-container {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		font-size: 1.5rem;
+
+		.first-set-container {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+
+			.first-shop {
+				.skewed-tag {
+					@include flex-center;
+					transform: skew(25deg, 0deg);
+					width: 200px;
+					height: 50px;
+					color: #fff;
+					background-color: #fa4407;
+					.unskewed-text {
+						transform: skew(-25deg, 0deg);
+					}
+				}
+			}
+			.second-shop {
+				.skewed-tag {
+					@include flex-center;
+					transform: skew(-25deg, 0deg);
+					width: 200px;
+					height: 50px;
+					color: #fff;
+					background-color: #4b858c;
+					.unskewed-text {
+						transform: skew(25deg, 0deg);
+					}
+				}
+			}
+		}
+		.second-set-container {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+
+			.third-shop {
+				.skewed-tag {
+					@include flex-center;
+					transform: skew(25deg, 0deg);
+					width: 200px;
+					height: 50px;
+					color: #000;
+					background-color: #fda50d;
+					.unskewed-text {
+						transform: skew(-25deg, 0deg);
+					}
+				}
+			}
+			.fourth-shop {
+				.skewed-tag {
+					@include flex-center;
+					transform: skew(-25deg, 0deg);
+					width: 200px;
+					height: 50px;
+					color: #000;
+					background-color: #a1bbab;
+					.unskewed-text {
+						transform: skew(25deg, 0deg);
+					}
+				}
 			}
 		}
 	}
