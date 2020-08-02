@@ -143,7 +143,7 @@ body {
 	background-color: #f7f3f2;
 	height: 100%;
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 32px;
+	font-size: 16px;
 }
 
 h1,
@@ -220,7 +220,7 @@ header .mobile-only-container {
 	z-index: 3;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 	header .mobile-only-container {
 		display: none;
 	}
@@ -294,7 +294,7 @@ header nav.showing {
 	max-width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 	header nav {
 		display: block;
 		position: relative;
@@ -349,18 +349,72 @@ header nav.showing {
 	align-content: center;
 	align-items: center;
 	justify-content: center;
-	-ms-transform: skew(-25deg, 0deg);
-	    transform: skew(-25deg, 0deg);
-	width: 100px;
+	font-size: 1.5rem;
 	background-color: #ca2706;
-	width: 230px;
-	height: 90px;
+	width: 40%;
+	height: 10%;
+	position: absolute;
+	top: 54%;
+	right: 30%;
+	transition: ease;
 }
 
-.hero .skewed-tag a div {
+@media screen and (min-width: 768px) {
+	.hero .skewed-tag {
+		width: 30%;
+		top: 73%;
+		right: 35%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.hero .skewed-tag {
+		width: 20%;
+		height: 15%;
+		top: 140%;
+		right: 45%;
+	}
+}
+
+.hero .skewed-tag :before {
+	content: '';
+	position: absolute;
+	background-color: #ca2706;
+	width: 20%;
+	height: 100%;
+	top: 0;
+	left: -12%;
+	-ms-transform: skew(-20deg, 0deg);
+	    transform: skew(-20deg, 0deg);
+}
+
+@media screen and (min-width: 1024px) {
+	.hero .skewed-tag :before {
+		height: 99.5%;
+	}
+}
+
+.hero .skewed-tag :after {
+	content: '';
+	position: absolute;
+	background-color: #ca2706;
+	width: 20%;
+	height: 100%;
+	top: 0;
+	right: -12%;
+	-ms-transform: skew(-20deg, 0deg);
+	    transform: skew(-20deg, 0deg);
+}
+
+@media screen and (min-width: 1024px) {
+	.hero .skewed-tag :after {
+		height: 99.5%;
+	}
+}
+
+.hero .skewed-tag a {
 	color: white;
-	-ms-transform: skew(25deg, 0deg);
-	    transform: skew(25deg, 0deg);
+	z-index: 5;
 }
 
 .hero .intro-text-img-container {
@@ -648,6 +702,10 @@ header nav.showing {
 	.shop-by .all-shop-container .first-set-container .first-shop .skewed-tag {
 		width: 160px;
 	}
+}
+
+.shop-by .all-shop-container .first-set-container .first-shop .skewed-tag :before {
+	content: '';
 }
 
 .shop-by .all-shop-container .first-set-container .first-shop .skewed-tag .unskewed-text {
