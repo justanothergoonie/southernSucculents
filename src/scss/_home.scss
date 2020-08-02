@@ -175,6 +175,9 @@ header {
 			@include flex-center;
 			flex-direction: column;
 			h2 {
+				@include iPhone-x {
+					font-size: 2rem;
+				}
 				font-size: 2.5rem;
 			}
 			span {
@@ -216,6 +219,9 @@ header {
 			@include flex-center;
 			flex-direction: column;
 			h2 {
+				@include iPhone-x {
+					font-size: 2rem;
+				}
 				font-size: 2.5rem;
 			}
 			span {
@@ -257,6 +263,9 @@ header {
 			@include flex-center;
 			flex-direction: column;
 			h2 {
+				@include iPhone-x {
+					font-size: 2rem;
+				}
 				font-size: 2.5rem;
 			}
 			span {
@@ -301,6 +310,9 @@ header {
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
+		@include iPhone-x {
+			font-size: 1.2rem;
+		}
 		font-size: 1.5rem;
 
 		.first-set-container {
@@ -312,6 +324,9 @@ header {
 				.skewed-tag {
 					@include flex-center;
 					transform: skew(25deg, 0deg);
+					@include iPhone-x {
+						width: 160px;
+					}
 					width: 200px;
 					height: 50px;
 					color: #fff;
@@ -325,6 +340,9 @@ header {
 				.skewed-tag {
 					@include flex-center;
 					transform: skew(-25deg, 0deg);
+					@include iPhone-x {
+						width: 160px;
+					}
 					width: 200px;
 					height: 50px;
 					color: #fff;
@@ -344,6 +362,9 @@ header {
 				.skewed-tag {
 					@include flex-center;
 					transform: skew(25deg, 0deg);
+					@include iPhone-x {
+						width: 160px;
+					}
 					width: 200px;
 					height: 50px;
 					color: #000;
@@ -357,6 +378,9 @@ header {
 				.skewed-tag {
 					@include flex-center;
 					transform: skew(-25deg, 0deg);
+					@include iPhone-x {
+						width: 160px;
+					}
 					width: 200px;
 					height: 50px;
 					color: #000;

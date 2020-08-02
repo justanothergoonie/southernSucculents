@@ -413,6 +413,12 @@ header nav.showing {
 	font-size: 2.5rem;
 }
 
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	.wedding-events .skewed-header div h2 {
+		font-size: 2rem;
+	}
+}
+
 .wedding-events .skewed-header div span {
 	display: none;
 }
@@ -474,6 +480,12 @@ header nav.showing {
 
 .dish-gardens .skewed-header div h2 {
 	font-size: 2.5rem;
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	.dish-gardens .skewed-header div h2 {
+		font-size: 2rem;
+	}
 }
 
 .dish-gardens .skewed-header div span {
@@ -539,6 +551,12 @@ header nav.showing {
 	font-size: 2.5rem;
 }
 
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	.vertical-gardens .skewed-header div h2 {
+		font-size: 2rem;
+	}
+}
+
 .vertical-gardens .skewed-header div span {
 	display: none;
 }
@@ -601,6 +619,12 @@ header nav.showing {
 	font-size: 1.5rem;
 }
 
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	.shop-by .all-shop-container {
+		font-size: 1.2rem;
+	}
+}
+
 .shop-by .all-shop-container .first-set-container {
 	display: flex;
 	align-items: center;
@@ -620,6 +644,12 @@ header nav.showing {
 	background-color: #fa4407;
 }
 
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	.shop-by .all-shop-container .first-set-container .first-shop .skewed-tag {
+		width: 160px;
+	}
+}
+
 .shop-by .all-shop-container .first-set-container .first-shop .skewed-tag .unskewed-text {
 	-ms-transform: skew(-25deg, 0deg);
 	    transform: skew(-25deg, 0deg);
@@ -636,6 +666,12 @@ header nav.showing {
 	height: 50px;
 	color: #fff;
 	background-color: #4b858c;
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	.shop-by .all-shop-container .first-set-container .second-shop .skewed-tag {
+		width: 160px;
+	}
 }
 
 .shop-by .all-shop-container .first-set-container .second-shop .skewed-tag .unskewed-text {
@@ -662,6 +698,12 @@ header nav.showing {
 	background-color: #fda50d;
 }
 
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	.shop-by .all-shop-container .second-set-container .third-shop .skewed-tag {
+		width: 160px;
+	}
+}
+
 .shop-by .all-shop-container .second-set-container .third-shop .skewed-tag .unskewed-text {
 	-ms-transform: skew(-25deg, 0deg);
 	    transform: skew(-25deg, 0deg);
@@ -678,6 +720,12 @@ header nav.showing {
 	height: 50px;
 	color: #000;
 	background-color: #a1bbab;
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	.shop-by .all-shop-container .second-set-container .fourth-shop .skewed-tag {
+		width: 160px;
+	}
 }
 
 .shop-by .all-shop-container .second-set-container .fourth-shop .skewed-tag .unskewed-text {
