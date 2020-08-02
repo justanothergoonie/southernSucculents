@@ -217,6 +217,7 @@ header .mobile-only-container {
 	position: fixed;
 	right: 1rem;
 	top: 1rem;
+	z-index: 3;
 }
 
 @media screen and (min-width: 768px) {
@@ -258,7 +259,7 @@ header .logo {
 	align-self: center;
 	position: relative;
 	top: 1.5rem;
-	z-index: 100;
+	z-index: 2;
 }
 
 header nav {
@@ -327,6 +328,62 @@ header nav.showing {
 		height: 25px;
 		display: block;
 	}
+}
+
+.banner img {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.hero {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.hero .skewed-tag {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	-ms-transform: skew(-25deg, 0deg);
+	    transform: skew(-25deg, 0deg);
+	width: 100px;
+	background-color: #ca2706;
+	width: 230px;
+	height: 90px;
+}
+
+.hero .skewed-tag a div {
+	color: white;
+	-ms-transform: skew(25deg, 0deg);
+	    transform: skew(25deg, 0deg);
+}
+
+.hero .intro-text-img-container {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero .intro-text-img-container .intro-text {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 50px;
+}
+
+.hero .intro-text-img-container .intro-text h2 {
+	font-size: 3rem;
+}
+
+.hero .intro-text-img-container .intro-text p {
+	margin: 30px;
+	font-size: 1.2rem;
+	text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -9,6 +9,8 @@ header {
 		position: fixed;
 		right: 1rem;
 		top: 1rem;
+		z-index: 3;
+
 		@include bp-med {
 			display: none;
 		}
@@ -43,7 +45,7 @@ header {
 		align-self: center;
 		position: relative;
 		top: 1.5rem;
-		z-index: 100;
+		z-index: 2;
 	}
 
 	nav {
@@ -103,6 +105,54 @@ header {
 						}
 					}
 				}
+			}
+		}
+	}
+}
+.banner {
+	img {
+		width: 100%;
+		margin-top: 20px;
+	}
+}
+.hero {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	.skewed-tag {
+		@include flex-center;
+		transform: skew(-25deg, 0deg);
+		width: 100px;
+		background-color: #ca2706;
+		width: 230px;
+		height: 90px;
+		// position: absolute;
+		// top: 30rem;
+		// left: 8.5rem;
+		a {
+			div {
+				color: white;
+				transform: skew(25deg, 0deg);
+			}
+		}
+		@include bp-med {
+			// top: 43rem;
+			// left: 13.5rem;
+		}
+	}
+	.intro-text-img-container {
+		@include flex-center;
+		.intro-text {
+			@include flex-center;
+			flex-direction: column;
+			margin-top: 50px;
+			h2 {
+				font-size: 3rem;
+			}
+			p {
+				margin: 30px;
+				font-size: 1.2rem;
+				text-align: center;
 			}
 		}
 	}
