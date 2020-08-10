@@ -22,27 +22,35 @@
 				<img src="./dist/img/logo.png" alt="" class="logo" />
 				<div class="mobile-only-container">
 					<img src="./dist/img/shopping-cart.png" alt="" />
-					<div class="hamburger">
-						<div class="line"></div>
-						<div class="line"></div>
-						<div class="line"></div>
+					<div class="hamburger" aria-label="nav-button">
+						<div class="line" aria-label="nav-button"></div>
+						<div class="line" aria-label="nav-button"></div>
+						<div class="line" aria-label="nav-button"></div>
 					</div>
 				</div>
 
 				<nav>
 					<ul>
 						<div>
-							<li><a href="">HOME</a></li>
-							<li><a href="">PLANTS</a></li>
-							<li><a href="">SHOP</a></li>
+							<li>
+								<a href="./index.html" aria-label="Home"
+									>HOME</a
+								>
+							</li>
+							<li><a href="" aria-label="Plants">PLANTS</a></li>
+							<li>
+								<a href="./shop.html" aria-label="Shop">SHOP</a>
+							</li>
 						</div>
 						<div>
 							<li>
-								<a href="">WEDDINGS&sol;<span>EVENTS</span></a>
+								<a href="" aria-label="Weddings and Events">
+									WEDDINGS&sol;<span>EVENTS</span>
+								</a>
 							</li>
 							<li>
-								<a href=""
-									>CART
+								<a href="" aria-label="Cart">
+									CART
 									<img
 										src="./dist/img/shopping-cart.png"
 										alt=""
@@ -54,20 +62,24 @@
 				</nav>
 			</header>
 
-			<section class="banner">
-				<img src="./dist/img/Succ.png" alt="" />
+			<section aria-label="banner image" class="banner">
+				<img
+					src="./dist/img/Succ.png"
+					alt="an overhead image of a field of succulents"
+					aria-labelledby="banner"
+				/>
 				<a href="">
-					<div class="skewed-tag">
+					<div class="skewed-tag" aria-label="Shop Now">
 						<div>
 							<span>SHOP NOW</span>
 						</div>
 					</div>
 				</a>
 			</section>
-			<section class="hero">
+			<section class="hero" aria-label="Introduction">
 				<div class="intro-text">
 					<h2>HELLO.</h2>
-					<p>
+					<p aria-required="true">
 						Welcome to Southeast Succulents, the premier source. Our
 						customers say we have "the best looking succulents in
 						The Southeast." In addition, we offer unique dish
@@ -78,8 +90,16 @@
 				<img src="./dist/img/transparentSucc.png" alt="" />
 			</section>
 
-			<section class="wedding-events">
-				<img src="./dist/img/wedding suc.png" alt="" />
+			<section
+				class="wedding-events"
+				aria-label="Wedding and Events"
+				aria-level="1"
+			>
+				<img
+					aria-level="2"
+					src="./dist/img/wedding suc.png"
+					alt="a wedding arrangement with succulents at the center"
+				/>
 				<div class="header-container">
 					<div class="skewed-header">
 						<div>
@@ -87,7 +107,7 @@
 							<span>Make your occasion special and unique.</span>
 						</div>
 					</div>
-					<a href="">
+					<a href="" aria-label="see more Wedding and Event options">
 						<div class="skewed-tag">
 							<div>
 								<span>SEE MORE</span>
@@ -97,8 +117,11 @@
 					</a>
 				</div>
 			</section>
-			<section class="dish-gardens">
-				<img src="./dist/img/dishSucc.png" alt="" />
+			<section class="dish-gardens" aria-label="Dish Gardens">
+				<img
+					src="./dist/img/dishSucc.png"
+					alt="a cactus succulent sits in the sunlight in a tiny dish garden"
+				/>
 				<div class="header-container">
 					<div class="skewed-header">
 						<div>
@@ -110,7 +133,10 @@
 						</div>
 					</div>
 					<a href="">
-						<div class="skewed-tag">
+						<div
+							class="skewed-tag"
+							aria-label="see more Dish Garden options"
+						>
 							<div>
 								<span>SEE MORE</span>
 								<span class="bp-med-only">Gardens</span>
@@ -119,8 +145,11 @@
 					</a>
 				</div>
 			</section>
-			<section class="vertical-gardens">
-				<img src="./dist/img/verticalSucc.png" alt="" />
+			<section class="vertical-gardens" aria-label="Vertical Gardens">
+				<img
+					src="./dist/img/verticalSucc.png"
+					alt="succulents growing in free soil mounted in the wall"
+				/>
 				<div class="header-container">
 					<div class="skewed-header">
 						<div>
