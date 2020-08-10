@@ -142,7 +142,7 @@ table {
 body {
 	background-color: #f7f3f2;
 	height: 100%;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 }
 
@@ -238,12 +238,15 @@ header .logo {
 }
 
 header nav {
+	font-size: 1.5rem;
+	font-weight: 100;
 	display: block;
 	position: fixed;
 	right: 1rem;
 	top: 5rem;
 	max-width: 0px;
 	overflow: hidden;
+	transition: 1s ease-in-out;
 	z-index: 1000;
 }
 
@@ -266,6 +269,7 @@ header nav ul li a .cart {
 }
 
 header nav.showing {
+	width: 100%;
 	max-width: 100%;
 }
 
@@ -315,6 +319,7 @@ header nav.showing {
 .banner img {
 	width: 100%;
 	margin-top: 20px;
+	z-index: -20;
 }
 
 .banner .skewed-tag {
@@ -322,19 +327,23 @@ header nav.showing {
 	align-content: center;
 	align-items: center;
 	justify-content: center;
-	font-size: 1.5rem;
+	font-size: 1.71rem;
+	color: white;
+	font-weight: 100;
 	background-color: #ca2706;
-	width: 40%;
+	width: 32%;
 	height: 20%;
 	position: absolute;
 	bottom: -2%;
-	right: 30%;
+	right: 32%;
+	z-index: 2;
 	transition: ease;
 }
 
 @media screen and (min-width: 768px) {
 	.banner .skewed-tag {
-		width: 30%;
+		font-size: 2.64rem;
+		width: 28%;
 		bottom: -2%;
 		right: 35%;
 	}
@@ -342,9 +351,10 @@ header nav.showing {
 
 @media screen and (min-width: 1024px) {
 	.banner .skewed-tag {
-		width: 20%;
-		height: 11%;
-		bottom: 2%;
+		font-size: 3.51rem;
+		width: 28%;
+		height: 18%;
+		bottom: 6%;
 		right: 45%;
 	}
 }
@@ -356,14 +366,15 @@ header nav.showing {
 	width: 20%;
 	height: 100%;
 	top: 0;
+	z-index: -2;
 	left: -12%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
 	.banner .skewed-tag :before {
-		height: 99.5%;
+		left: -10%;
 	}
 }
 
@@ -374,14 +385,15 @@ header nav.showing {
 	width: 20%;
 	height: 100%;
 	top: 0;
+	z-index: -2;
 	right: -12%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
 	.banner .skewed-tag :after {
-		height: 99.5%;
+		right: -10%;
 	}
 }
 
@@ -390,54 +402,136 @@ header nav.showing {
 	z-index: 5;
 }
 
-.hero .intro-text-img-container {
-	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
+.hero {
+	position: relative;
 }
 
-.hero .intro-text-img-container .intro-text {
+@media screen and (min-width: 1024px) {
+	.hero {
+		display: flex;
+	}
+}
+
+.hero .intro-text {
 	display: flex;
-	align-content: center;
 	align-items: center;
-	justify-content: center;
 	flex-direction: column;
 	margin-top: 50px;
 }
 
-.hero .intro-text-img-container .intro-text h2 {
-	font-size: 3rem;
+@media screen and (min-width: 1024px) {
+	.hero .intro-text {
+		align-items: unset;
+		margin-top: 0px;
+	}
 }
 
-.hero .intro-text-img-container .intro-text p {
+.hero .intro-text h2 {
+	font-size: 3.75rem;
+	font-family: Roboto;
+	font-weight: 100;
+}
+
+@media screen and (min-width: 1024px) {
+	.hero .intro-text h2 {
+		margin: 1.523% 8.8%;
+	}
+}
+
+.hero .intro-text p {
 	margin: 30px;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	text-align: center;
 }
 
-.hero .intro-text-img-container .intro-text img {
+@media screen and (min-width: 1024px) {
+	.hero .intro-text p {
+		margin: 0rem 31.2% 2.07% 8.7%;
+		text-align: unset;
+		width: 38.2%;
+	}
+}
+
+.hero img {
 	display: none;
 }
 
+@media screen and (min-width: 1024px) {
+	.hero img {
+		display: flex;
+		position: absolute;
+		position: absolute;
+		bottom: 25%;
+		left: 65%;
+		overflow: hidden;
+	}
+}
+
 .wedding-events {
+	position: relative;
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+	.wedding-events {
+		flex-direction: row;
+		justify-content: flex-end;
+	}
 }
 
 .wedding-events img {
 	width: 100%;
 }
 
-.wedding-events .skewed-header {
+@media screen and (min-width: 1024px) {
+	.wedding-events img {
+		width: 66.032%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -7;
+	}
+}
+
+.wedding-events .header-container {
+	position: relative;
+	z-index: 10;
+}
+
+@media screen and (min-width: 1024px) {
+	.wedding-events .header-container {
+		width: 37.11%;
+	}
+}
+
+.wedding-events .header-container .skewed-header {
+	position: relative;
 	margin: 50px 0px 220px 0px;
 }
 
-.wedding-events .skewed-header div {
+@media screen and (min-width: 1024px) {
+	.wedding-events .header-container .skewed-header {
+		background-color: #f7f3f3;
+	}
+	.wedding-events .header-container .skewed-header :before {
+		content: '';
+		position: absolute;
+		background-color: #f7f3f3;
+		width: 23%;
+		height: 100%;
+		top: 0;
+		z-index: -4;
+		left: -12%;
+		-ms-transform: skew(-20deg, 0deg);
+		    transform: skew(-20deg, 0deg);
+	}
+}
+
+.wedding-events .header-container .skewed-header div {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -445,103 +539,125 @@ header nav.showing {
 	flex-direction: column;
 }
 
-.wedding-events .skewed-header div h2 {
-	font-size: 2.5rem;
+@media screen and (min-width: 1024px) {
+	.wedding-events .header-container .skewed-header div {
+		align-items: baseline;
+	}
+}
+
+.wedding-events .header-container .skewed-header div h2 {
+	font-weight: 100;
+	font-size: 2.8rem;
 }
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	.wedding-events .skewed-header div h2 {
+	.wedding-events .header-container .skewed-header div h2 {
 		font-size: 2rem;
 	}
 }
 
-.wedding-events .skewed-header div span {
+@media screen and (min-width: 1024px) {
+	.wedding-events .header-container .skewed-header div h2 {
+		font-size: 4.28rem;
+		padding-left: 1%;
+	}
+}
+
+.wedding-events .header-container .skewed-header div span {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
-	.wedding-events .skewed-header div span {
+	.wedding-events .header-container .skewed-header div span {
 		display: block;
 		padding: 30px 0px;
 		font-size: 1.4rem;
 	}
 }
 
-.wedding-events .skewed-tag {
+.wedding-events .header-container .skewed-tag {
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
 	position: absolute;
 	background-color: #fa4407;
-	width: 230px;
+	width: 150px;
 	height: 90px;
-	bottom: 12%;
-	right: 30%;
+	bottom: 30%;
+	font-size: 1.91rem;
+	font-weight: 100;
+	right: 33%;
 }
 
 @media screen and (min-width: 768px) {
-	.wedding-events .skewed-tag {
+	.wedding-events .header-container .skewed-tag {
 		bottom: 10%;
 		right: 35%;
 		text-align: center;
 	}
 }
 
-.wedding-events .skewed-tag div {
+@media screen and (min-width: 1024px) {
+	.wedding-events .header-container .skewed-tag {
+		bottom: 22.5%;
+		right: 67.5%;
+		height: 110px;
+		width: 175px;
+	}
+}
+
+.wedding-events .header-container .skewed-tag div {
 	color: #fff;
+	z-index: 2;
 }
 
 @media screen and (min-width: 768px) {
-	.wedding-events .skewed-tag div {
+	.wedding-events .header-container .skewed-tag div {
 		font-size: 1.3rem;
 	}
 }
 
-.wedding-events .skewed-tag div .bp-med-only {
+.wedding-events .header-container .skewed-tag div .bp-med-only {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
-	.wedding-events .skewed-tag div .bp-med-only {
+	.wedding-events .header-container .skewed-tag div .bp-med-only {
 		display: block;
 	}
 }
 
-.wedding-events .skewed-tag :before {
+@media screen and (min-width: 1024px) {
+	.wedding-events .header-container .skewed-tag div {
+		font-size: 2.25rem;
+	}
+}
+
+.wedding-events .header-container .skewed-tag :before {
 	content: '';
 	position: absolute;
 	background-color: #fa4407;
-	width: 20%;
+	width: 23%;
 	height: 100%;
 	top: 0;
+	z-index: -4;
 	left: -12%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
 }
 
-@media screen and (min-width: 1024px) {
-	.wedding-events .skewed-tag :before {
-		height: 99.5%;
-	}
-}
-
-.wedding-events .skewed-tag :after {
+.wedding-events .header-container .skewed-tag :after {
 	content: '';
 	position: absolute;
 	background-color: #fa4407;
-	width: 20%;
+	width: 23%;
 	height: 100%;
 	top: 0;
+	z-index: -4;
 	right: -12%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
-}
-
-@media screen and (min-width: 1024px) {
-	.wedding-events .skewed-tag :after {
-		height: 99.5%;
-	}
 }
 
 .dish-gardens {
@@ -553,15 +669,60 @@ header nav.showing {
 	position: relative;
 }
 
+@media screen and (min-width: 1024px) {
+	.dish-gardens {
+		justify-content: flex-start;
+		flex-direction: row;
+		margin-top: 19%;
+	}
+}
+
 .dish-gardens img {
 	width: 100%;
 }
 
-.dish-gardens .skewed-header {
-	margin: 50px 0px 220px 0px;
+@media screen and (min-width: 1024px) {
+	.dish-gardens img {
+		width: 56.14%;
+		position: absolute;
+		right: 0;
+		bottom: -20%;
+	}
 }
 
-.dish-gardens .skewed-header div {
+.dish-gardens .header-container {
+	position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+	.dish-gardens .header-container {
+		width: 43.92%;
+	}
+}
+
+.dish-gardens .header-container .skewed-header {
+	margin: 50px 0px 220px 0px;
+	position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+	.dish-gardens .header-container .skewed-header {
+		background-color: #f7f3f3;
+	}
+	.dish-gardens .header-container .skewed-header :before {
+		content: '';
+		position: absolute;
+		background-color: #f7f3f3;
+		width: 10%;
+		height: 100%;
+		top: 0;
+		right: -4%;
+		-ms-transform: skew(20deg, 0deg);
+		    transform: skew(20deg, 0deg);
+	}
+}
+
+.dish-gardens .header-container .skewed-header div {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -569,102 +730,145 @@ header nav.showing {
 	flex-direction: column;
 }
 
-.dish-gardens .skewed-header div h2 {
-	font-size: 2.5rem;
+@media screen and (min-width: 1024px) {
+	.dish-gardens .header-container .skewed-header div {
+		text-align: right;
+		align-items: flex-start;
+	}
+}
+
+.dish-gardens .header-container .skewed-header div h2 {
+	font-weight: 100;
+	font-size: 4rem;
 }
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	.dish-gardens .skewed-header div h2 {
+	.dish-gardens .header-container .skewed-header div h2 {
 		font-size: 2rem;
 	}
 }
 
-.dish-gardens .skewed-header div span {
+@media screen and (min-width: 1024px) {
+	.dish-gardens .header-container .skewed-header div h2 {
+		font-size: 4.28rem;
+		padding-left: 4.39%;
+	}
+}
+
+.dish-gardens .header-container .skewed-header div span {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
-	.dish-gardens .skewed-header div span {
+	.dish-gardens .header-container .skewed-header div span {
 		display: block;
 		padding: 30px 0px;
 		font-size: 1.4rem;
 	}
 }
 
-.dish-gardens .skewed-tag {
+@media screen and (min-width: 1024px) {
+	.dish-gardens .header-container .skewed-header div span {
+		padding-left: 4.39%;
+	}
+}
+
+.dish-gardens .header-container .skewed-tag {
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
 	position: absolute;
 	background-color: #fda50d;
-	width: 230px;
+	width: 150px;
 	height: 90px;
-	bottom: 12%;
-	right: 30%;
+	bottom: 30%;
+	font-size: 1.91rem;
+	font-weight: 100;
+	right: 33%;
 }
 
 @media screen and (min-width: 768px) {
-	.dish-gardens .skewed-tag {
+	.dish-gardens .header-container .skewed-tag {
 		bottom: 10%;
 		right: 35%;
 		text-align: center;
 	}
 }
 
-.dish-gardens .skewed-tag div {
+@media screen and (min-width: 1024px) {
+	.dish-gardens .header-container .skewed-tag {
+		bottom: 26%;
+		left: 76.5%;
+		height: 110px;
+		width: 175px;
+		z-index: 2;
+	}
+}
+
+.dish-gardens .header-container .skewed-tag div {
 	color: #fff;
 }
 
 @media screen and (min-width: 768px) {
-	.dish-gardens .skewed-tag div {
+	.dish-gardens .header-container .skewed-tag div {
 		font-size: 1.3rem;
 	}
 }
 
-.dish-gardens .skewed-tag div .bp-med-only {
+.dish-gardens .header-container .skewed-tag div .bp-med-only {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
-	.dish-gardens .skewed-tag div .bp-med-only {
+	.dish-gardens .header-container .skewed-tag div .bp-med-only {
 		display: block;
 	}
 }
 
-.dish-gardens .skewed-tag :before {
+@media screen and (min-width: 1024px) {
+	.dish-gardens .header-container .skewed-tag div {
+		font-size: 2.25rem;
+	}
+}
+
+.dish-gardens .header-container .skewed-tag :before {
 	content: '';
 	position: absolute;
 	background-color: #fda50d;
-	width: 20%;
+	width: 23%;
 	height: 100%;
 	top: 0;
+	z-index: -4;
 	left: -12%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
 }
 
 @media screen and (min-width: 1024px) {
-	.dish-gardens .skewed-tag :before {
-		height: 99.5%;
+	.dish-gardens .header-container .skewed-tag :before {
+		-ms-transform: skew(20deg, 0deg);
+		    transform: skew(20deg, 0deg);
 	}
 }
 
-.dish-gardens .skewed-tag :after {
+.dish-gardens .header-container .skewed-tag :after {
 	content: '';
 	position: absolute;
 	background-color: #fda50d;
-	width: 20%;
+	width: 23%;
 	height: 100%;
 	top: 0;
+	z-index: -4;
 	right: -12%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
 }
 
 @media screen and (min-width: 1024px) {
-	.dish-gardens .skewed-tag :after {
-		height: 99.5%;
+	.dish-gardens .header-container .skewed-tag :after {
+		-ms-transform: skew(20deg, 0deg);
+		    transform: skew(20deg, 0deg);
 	}
 }
 
@@ -677,15 +881,62 @@ header nav.showing {
 	position: relative;
 }
 
+@media screen and (min-width: 1024px) {
+	.vertical-gardens {
+		flex-direction: row;
+		justify-content: flex-end;
+		margin-top: 5%;
+	}
+}
+
 .vertical-gardens img {
 	width: 100%;
 }
 
-.vertical-gardens .skewed-header {
-	margin: 50px 0px 220px 0px;
+@media screen and (min-width: 1024px) {
+	.vertical-gardens img {
+		position: absolute;
+		width: 66.03%;
+		top: 0;
+		left: 0;
+		z-index: -10000;
+	}
 }
 
-.vertical-gardens .skewed-header div {
+.vertical-gardens .header-container {
+	position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+	.vertical-gardens .header-container {
+		width: 37.8%;
+	}
+}
+
+.vertical-gardens .header-container .skewed-header {
+	margin: 50px 0px 220px 0px;
+	position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+	.vertical-gardens .header-container .skewed-header {
+		background-color: #f7f3f3;
+	}
+	.vertical-gardens .header-container .skewed-header :before {
+		content: '';
+		position: absolute;
+		background-color: #f7f3f3;
+		width: 15%;
+		height: 100%;
+		top: 0;
+		z-index: -10;
+		left: -8%;
+		-ms-transform: skew(-20deg, 0deg);
+		    transform: skew(-20deg, 0deg);
+	}
+}
+
+.vertical-gardens .header-container .skewed-header div {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -693,103 +944,130 @@ header nav.showing {
 	flex-direction: column;
 }
 
-.vertical-gardens .skewed-header div h2 {
-	font-size: 2.5rem;
+@media screen and (min-width: 1024px) {
+	.vertical-gardens .header-container .skewed-header div {
+		align-items: initial;
+	}
+}
+
+.vertical-gardens .header-container .skewed-header div h2 {
+	font-weight: 100;
+	font-size: 3rem;
 }
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	.vertical-gardens .skewed-header div h2 {
+	.vertical-gardens .header-container .skewed-header div h2 {
 		font-size: 2rem;
 	}
 }
 
-.vertical-gardens .skewed-header div span {
+@media screen and (min-width: 1024px) {
+	.vertical-gardens .header-container .skewed-header div h2 {
+		font-size: 4.75rem;
+		z-index: 10;
+	}
+}
+
+.vertical-gardens .header-container .skewed-header div span {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
-	.vertical-gardens .skewed-header div span {
+	.vertical-gardens .header-container .skewed-header div span {
 		display: block;
 		padding: 30px 0px;
 		font-size: 1.4rem;
 	}
 }
 
-.vertical-gardens .skewed-tag {
+@media screen and (min-width: 1024px) {
+	.vertical-gardens .header-container .skewed-header div span {
+		z-index: 9;
+	}
+}
+
+.vertical-gardens .header-container .skewed-tag {
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
 	position: absolute;
 	background-color: #6e352d;
-	width: 230px;
+	width: 150px;
 	height: 90px;
-	bottom: 8%;
-	right: 30%;
+	bottom: 30%;
+	font-size: 1.91rem;
+	font-weight: 100;
+	right: 33%;
 }
 
 @media screen and (min-width: 768px) {
-	.vertical-gardens .skewed-tag {
+	.vertical-gardens .header-container .skewed-tag {
 		bottom: 6%;
 		right: 35%;
 		text-align: center;
 	}
 }
 
-.vertical-gardens .skewed-tag div {
+@media screen and (min-width: 1024px) {
+	.vertical-gardens .header-container .skewed-tag {
+		bottom: 21.5%;
+		right: 76.5%;
+		height: 110px;
+		width: 175px;
+	}
+}
+
+.vertical-gardens .header-container .skewed-tag div {
 	color: #fff;
 }
 
 @media screen and (min-width: 768px) {
-	.vertical-gardens .skewed-tag div {
+	.vertical-gardens .header-container .skewed-tag div {
 		font-size: 1.3rem;
 	}
 }
 
-.vertical-gardens .skewed-tag div .bp-med-only {
+.vertical-gardens .header-container .skewed-tag div .bp-med-only {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
-	.vertical-gardens .skewed-tag div .bp-med-only {
+	.vertical-gardens .header-container .skewed-tag div .bp-med-only {
 		display: block;
 	}
 }
 
-.vertical-gardens .skewed-tag :before {
+@media screen and (min-width: 1024px) {
+	.vertical-gardens .header-container .skewed-tag div {
+		font-size: 2.25rem;
+	}
+}
+
+.vertical-gardens .header-container .skewed-tag :before {
 	content: '';
 	position: absolute;
 	background-color: #6e352d;
-	width: 20%;
+	width: 23%;
 	height: 100%;
 	top: 0;
+	z-index: -4;
 	left: -12%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
 }
 
-@media screen and (min-width: 1024px) {
-	.vertical-gardens .skewed-tag :before {
-		height: 99.5%;
-	}
-}
-
-.vertical-gardens .skewed-tag :after {
+.vertical-gardens .header-container .skewed-tag :after {
 	content: '';
 	position: absolute;
 	background-color: #6e352d;
-	width: 20%;
+	width: 23%;
 	height: 100%;
 	top: 0;
+	z-index: -4;
 	right: -12%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
-}
-
-@media screen and (min-width: 1024px) {
-	.vertical-gardens .skewed-tag :after {
-		height: 99.5%;
-	}
 }
 
 .shop-by {
@@ -801,11 +1079,21 @@ header nav.showing {
 	flex-direction: column;
 }
 
-.shop-by .line {
-	width: 100%;
-	height: 1px;
-	background-color: #000;
-	z-index: 0;
+@media screen and (min-width: 1024px) {
+	.shop-by {
+		margin-top: 30%;
+	}
+}
+
+.shop-by h2 {
+	font-size: 2.7rem;
+	font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+	.shop-by h2 {
+		font-size: 3.75rem;
+	}
 }
 
 .shop-by .all-shop-container {
@@ -813,9 +1101,14 @@ header nav.showing {
 	align-content: center;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	justify-content: space-around;
 	width: 100%;
 	font-size: 1.3rem;
+}
+
+.shop-by .all-shop-container img {
+	padding: 0.876rem 0%;
 }
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
@@ -824,21 +1117,53 @@ header nav.showing {
 	}
 }
 
+@media screen and (min-width: 1024px) {
+	.shop-by .all-shop-container {
+		align-items: end;
+		justify-content: space-evenly;
+		flex-direction: row;
+		padding-top: 3.31%;
+	}
+}
+
 .shop-by .all-shop-container .first-set-container {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+}
+
+@media screen and (min-width: 1024px) {
+	.shop-by .all-shop-container .first-set-container {
+		padding-right: 4.02%;
+		align-items: end;
+	}
+}
+
+.shop-by .all-shop-container .first-set-container .first-shop {
+	width: 100%;
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
-	align-items: center;
 	flex-direction: column;
+	padding-right: 9.333%;
 }
 
-.shop-by .all-shop-container .first-set-container .first-shop {
+@media screen and (min-width: 768px) {
+	.shop-by .all-shop-container .first-set-container .first-shop {
+		padding-right: 21.83%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.shop-by .all-shop-container .first-set-container .first-shop {
+		padding-right: 9.333%;
+		flex-direction: column-reverse;
+	}
+}
+
+.shop-by .all-shop-container .first-set-container .first-shop a .skewed-tag {
 	position: relative;
-	width: 100%;
-}
-
-.shop-by .all-shop-container .first-set-container .first-shop .skewed-tag {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -850,57 +1175,64 @@ header nav.showing {
 }
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	.shop-by .all-shop-container .first-set-container .first-shop .skewed-tag {
+	.shop-by .all-shop-container .first-set-container .first-shop a .skewed-tag {
 		width: 160px;
 	}
 }
 
-.shop-by .all-shop-container .first-set-container .first-shop :before {
+.shop-by .all-shop-container .first-set-container .first-shop a .skewed-tag div :before {
 	content: '';
 	position: absolute;
 	background-color: #fa4407;
 	width: 10%;
-	height: 55%;
+	height: 100%;
 	bottom: 0;
 	left: -5%;
 	-ms-transform: skew(20deg, 0deg);
 	    transform: skew(20deg, 0deg);
 }
 
-@media screen and (min-width: 1024px) {
-	.shop-by .all-shop-container .first-set-container .first-shop :before {
-		height: 99.5%;
-	}
-}
-
-.shop-by .all-shop-container .first-set-container .first-shop :after {
+.shop-by .all-shop-container .first-set-container .first-shop a .skewed-tag div :after {
 	content: '';
 	position: absolute;
 	background-color: #fa4407;
 	width: 10%;
-	height: 55%;
+	height: 100%;
 	bottom: 0;
 	right: -5%;
 	-ms-transform: skew(20deg, 0deg);
 	    transform: skew(20deg, 0deg);
 }
 
-@media screen and (min-width: 1024px) {
-	.shop-by .all-shop-container .first-set-container .first-shop :after {
-		height: 99.5%;
-	}
-}
-
 .shop-by .all-shop-container .first-set-container .second-shop {
-	position: relative;
-	width: 100%;
-}
-
-.shop-by .all-shop-container .first-set-container .second-shop .skewed-tag {
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	padding-left: 9.333%;
+}
+
+@media screen and (min-width: 768px) {
+	.shop-by .all-shop-container .first-set-container .second-shop {
+		padding-left: 21.83%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.shop-by .all-shop-container .first-set-container .second-shop {
+		padding-left: 9.333%;
+		flex-direction: column-reverse;
+	}
+}
+
+.shop-by .all-shop-container .first-set-container .second-shop a .skewed-tag {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	position: relative;
 	width: 175px;
 	height: 50px;
 	color: #fff;
@@ -908,59 +1240,73 @@ header nav.showing {
 }
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	.shop-by .all-shop-container .first-set-container .second-shop .skewed-tag {
+	.shop-by .all-shop-container .first-set-container .second-shop a .skewed-tag {
 		width: 160px;
 	}
 }
 
-.shop-by .all-shop-container .first-set-container .second-shop :before {
+.shop-by .all-shop-container .first-set-container .second-shop a .skewed-tag div :before {
 	content: '';
 	position: absolute;
 	background-color: #4b858c;
 	width: 15%;
-	height: 55%;
+	height: 100%;
 	bottom: 0;
 	left: -6%;
 	-ms-transform: skew(25deg, 0deg);
 	    transform: skew(25deg, 0deg);
 }
 
-@media screen and (min-width: 1024px) {
-	.shop-by .all-shop-container .first-set-container .second-shop :before {
-		height: 99.5%;
-	}
-}
-
-.shop-by .all-shop-container .first-set-container .second-shop :after {
+.shop-by .all-shop-container .first-set-container .second-shop a .skewed-tag div :after {
 	content: '';
 	position: absolute;
 	background-color: #4b858c;
 	width: 15%;
-	height: 55%;
+	height: 100%;
 	bottom: 0;
 	right: -6.5%;
 	-ms-transform: skew(-25deg, 0deg);
 	    transform: skew(-25deg, 0deg);
 }
 
+.shop-by .all-shop-container .second-set-container {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+}
+
 @media screen and (min-width: 1024px) {
-	.shop-by .all-shop-container .first-set-container .second-shop :after {
-		height: 99.5%;
+	.shop-by .all-shop-container .second-set-container {
+		padding-left: 4.02%;
+		align-items: end;
 	}
 }
 
-.shop-by .all-shop-container .second-set-container {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
-
 .shop-by .all-shop-container .second-set-container .third-shop {
-	position: relative;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	width: 100%;
+	padding-right: 9.333%;
 }
 
-.shop-by .all-shop-container .second-set-container .third-shop .skewed-tag {
+@media screen and (min-width: 768px) {
+	.shop-by .all-shop-container .second-set-container .third-shop {
+		padding-right: 21.83%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.shop-by .all-shop-container .second-set-container .third-shop {
+		padding-right: 9.333%;
+		flex-direction: column-reverse;
+	}
+}
+
+.shop-by .all-shop-container .second-set-container .third-shop a .skewed-tag {
+	position: relative;
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -973,57 +1319,64 @@ header nav.showing {
 }
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	.shop-by .all-shop-container .second-set-container .third-shop .skewed-tag {
+	.shop-by .all-shop-container .second-set-container .third-shop a .skewed-tag {
 		width: 160px;
 	}
 }
 
-.shop-by .all-shop-container .second-set-container .third-shop :before {
+.shop-by .all-shop-container .second-set-container .third-shop a .skewed-tag div :before {
 	content: '';
 	position: absolute;
 	background-color: #fda50d;
 	width: 10%;
-	height: 55%;
+	height: 100%;
 	bottom: 0;
 	left: -5%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
 }
 
-@media screen and (min-width: 1024px) {
-	.shop-by .all-shop-container .second-set-container .third-shop :before {
-		height: 99.5%;
-	}
-}
-
-.shop-by .all-shop-container .second-set-container .third-shop :after {
+.shop-by .all-shop-container .second-set-container .third-shop a .skewed-tag div :after {
 	content: '';
 	position: absolute;
 	background-color: #fda50d;
 	width: 10%;
-	height: 55%;
+	height: 100%;
 	bottom: 0;
 	right: -5%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
 }
 
-@media screen and (min-width: 1024px) {
-	.shop-by .all-shop-container .second-set-container .third-shop :after {
-		height: 99.5%;
-	}
-}
-
 .shop-by .all-shop-container .second-set-container .fourth-shop {
-	position: relative;
-	width: 100%;
-}
-
-.shop-by .all-shop-container .second-set-container .fourth-shop .skewed-tag {
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	padding-left: 9.333%;
+}
+
+@media screen and (min-width: 768px) {
+	.shop-by .all-shop-container .second-set-container .fourth-shop {
+		padding-left: 21.83%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.shop-by .all-shop-container .second-set-container .fourth-shop {
+		padding-left: 9.333%;
+		flex-direction: column-reverse;
+	}
+}
+
+.shop-by .all-shop-container .second-set-container .fourth-shop a .skewed-tag {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	position: relative;
 	width: 175px;
 	height: 50px;
 	color: #000;
@@ -1031,48 +1384,37 @@ header nav.showing {
 }
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	.shop-by .all-shop-container .second-set-container .fourth-shop .skewed-tag {
+	.shop-by .all-shop-container .second-set-container .fourth-shop a .skewed-tag {
 		width: 160px;
 	}
 }
 
-.shop-by .all-shop-container .second-set-container .fourth-shop :before {
+.shop-by .all-shop-container .second-set-container .fourth-shop a .skewed-tag div :before {
 	content: '';
 	position: absolute;
 	background-color: #a1bbab;
 	width: 15%;
-	height: 55%;
+	height: 100%;
 	bottom: 0;
 	left: -6%;
 	-ms-transform: skew(-25deg, 0deg);
 	    transform: skew(-25deg, 0deg);
 }
 
-@media screen and (min-width: 1024px) {
-	.shop-by .all-shop-container .second-set-container .fourth-shop :before {
-		height: 99.5%;
-	}
-}
-
-.shop-by .all-shop-container .second-set-container .fourth-shop :after {
+.shop-by .all-shop-container .second-set-container .fourth-shop a .skewed-tag div :after {
 	content: '';
 	position: absolute;
 	background-color: #a1bbab;
 	width: 15%;
-	height: 55%;
+	height: 100%;
 	bottom: 0;
 	right: -6.5%;
 	-ms-transform: skew(25deg, 0deg);
 	    transform: skew(25deg, 0deg);
 }
 
-@media screen and (min-width: 1024px) {
-	.shop-by .all-shop-container .second-set-container .fourth-shop :after {
-		height: 99.5%;
-	}
-}
-
 footer {
+	background-color: #dcd0cf;
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -1089,35 +1431,27 @@ footer {
 
 footer .contact {
 	display: flex;
-	align-content: center;
 	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 100%;
+	flex-direction: column-reverse;
 }
 
 @media screen and (min-width: 768px) {
 	footer .contact {
-		width: 40%;
-		justify-content: space-evenly;
+		flex-direction: column;
 	}
 }
 
-footer .contact img {
-	width: 32px;
-}
-
 footer .contact .contact-head {
-	padding-bottom: 30px;
-	width: 68%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
+	display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 	footer .contact .contact-head {
-		width: 88%;
+		padding-bottom: 30px;
+		width: 70%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
 	}
 }
 
@@ -1131,107 +1465,124 @@ footer .contact .contact-head span {
 }
 
 footer .contact .contact-info {
-	width: 100%;
-	display: flex;
-	justify-content: space-evenly;
-}
-
-footer .contact .contact-info .contact-images {
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
+	display: flex;
 	flex-direction: column;
+	padding-bottom: 17.529%;
 }
 
-footer .contact .contact-info .contact-images img {
-	margin-bottom: 29px;
-}
-
-footer .contact .contact-info .contact-images img :first-child {
-	padding-top: 100px;
-}
-
-footer .contact .contact-info .contact-text {
+footer .contact .contact-info .contacts {
 	display: flex;
 	align-content: center;
-	justify-content: space-around;
-	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	padding: 0.542rem 0rem;
 }
 
-footer .contact .contact-info .contact-text .address-info {
+footer .contact .contact-info .contacts img {
+	width: 6.66%;
+}
+
+@media screen and (min-width: 768px) {
+	footer .contact .contact-info .contacts {
+		width: 100%;
+	}
+}
+
+footer .contact .contact-info .contacts.address img {
+	padding-bottom: 3.8rem;
+}
+
+footer .contact .contact-info .contacts.address .address-info {
 	display: flex;
 	flex-direction: column;
+	line-height: 2.086rem;
+}
+
+footer .contact .contact-info .contacts span {
+	padding-left: 0.668rem;
+	font-size: 1.375rem;
 }
 
 footer .contact .social-links {
 	display: flex;
-	width: 67%;
-	justify-content: space-between;
+	justify-content: space-evenly;
+	padding: 11.47% 0rem;
 }
 
-@media screen and (min-width: 768px) {
-	footer .contact .social-links {
-		width: 88%;
-	}
+footer .contact .social-links img {
+	width: 12.5%;
 }
 
 footer form {
-	margin: 50px 0px;
-	display: flex;
-	justify-content: center;
-	width: 67%;
-	flex-direction: column;
+	display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
+	footer form {
+		margin: 50px 0px;
+		display: flex;
+		justify-content: center;
+		width: 67%;
+		flex-direction: column;
+	}
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
 	footer form {
 		width: 60%;
 		margin: 50px 20px;
 	}
 }
 
-footer form input {
-	margin: 10px 0px;
+@media screen and (min-width: 1024px) {
+	footer form input {
+		margin: 10px 0px;
+	}
+	footer form input.name {
+		height: 50px;
+	}
+	footer form input.email {
+		height: 50px;
+	}
+	footer form div button {
+		position: relative;
+		margin: 20px 0px;
+		border: none;
+		height: 120px;
+		font-size: 2rem;
+		background-color: #193638;
+		width: 70%;
+	}
 }
 
-footer form input.name {
-	height: 50px;
-}
-
-footer form input.email {
-	height: 50px;
-}
-
-footer form div button {
-	position: relative;
-	margin: 20px 0px;
-	border: none;
-	height: 120px;
-	font-size: 2rem;
-	background-color: #193638;
-	width: 70%;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) and (min-width: 768px) {
 	footer form div button {
 		width: 60%;
 	}
 }
 
-footer form div :before {
-	content: '';
-	height: 120px;
-	background-color: #f7f3f2;
-	position: absolute;
-	width: 37%;
-	top: 0%;
-	right: -19%;
-	-ms-transform: skew(-35deg, 0deg);
-	    transform: skew(-35deg, 0deg);
+@media screen and (min-width: 1024px) {
+	footer form div :before {
+		content: '';
+		height: 120px;
+		background-color: #1a3637;
+		position: absolute;
+		width: 37%;
+		top: 0%;
+		right: -19%;
+		-ms-transform: skew(-35deg, 0deg);
+		    transform: skew(-35deg, 0deg);
+	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) and (min-width: 768px) {
 	footer form div :before {
 		width: 41%;
 		top: 0%;
