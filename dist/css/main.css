@@ -709,17 +709,6 @@ header nav.showing {
 	.dish-gardens .header-container .skewed-header {
 		background-color: #f7f3f3;
 	}
-	.dish-gardens .header-container .skewed-header :before {
-		content: '';
-		position: absolute;
-		background-color: #f7f3f3;
-		width: 10%;
-		height: 100%;
-		top: 0;
-		right: -4%;
-		-ms-transform: skew(20deg, 0deg);
-		    transform: skew(20deg, 0deg);
-	}
 }
 
 .dish-gardens .header-container .skewed-header div {
@@ -740,6 +729,38 @@ header nav.showing {
 .dish-gardens .header-container .skewed-header div h2 {
 	font-weight: 100;
 	font-size: 4rem;
+	z-index: 10;
+}
+
+.dish-gardens .header-container .skewed-header div h2 span {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.dish-gardens .header-container .skewed-header div h2 span {
+		display: block;
+		padding: 30px 0px;
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.dish-gardens .header-container .skewed-header div h2 span {
+		padding-left: 4.39%;
+	}
+}
+
+.dish-gardens .header-container .skewed-header div h2 :before {
+	content: '';
+	position: absolute;
+	background-color: #f7f3f3;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	z-index: -4;
+	right: -4%;
+	-ms-transform: skew(20deg, 0deg);
+	    transform: skew(20deg, 0deg);
 }
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
@@ -751,24 +772,6 @@ header nav.showing {
 @media screen and (min-width: 1024px) {
 	.dish-gardens .header-container .skewed-header div h2 {
 		font-size: 4.28rem;
-		padding-left: 4.39%;
-	}
-}
-
-.dish-gardens .header-container .skewed-header div span {
-	display: none;
-}
-
-@media screen and (min-width: 768px) {
-	.dish-gardens .header-container .skewed-header div span {
-		display: block;
-		padding: 30px 0px;
-		font-size: 1.4rem;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.dish-gardens .header-container .skewed-header div span {
 		padding-left: 4.39%;
 	}
 }
@@ -802,7 +805,7 @@ header nav.showing {
 		left: 76.5%;
 		height: 110px;
 		width: 175px;
-		z-index: 2;
+		z-index: 14;
 	}
 }
 
@@ -922,18 +925,6 @@ header nav.showing {
 	.vertical-gardens .header-container .skewed-header {
 		background-color: #f7f3f3;
 	}
-	.vertical-gardens .header-container .skewed-header :before {
-		content: '';
-		position: absolute;
-		background-color: #f7f3f3;
-		width: 15%;
-		height: 100%;
-		top: 0;
-		z-index: -10;
-		left: -8%;
-		-ms-transform: skew(-20deg, 0deg);
-		    transform: skew(-20deg, 0deg);
-	}
 }
 
 .vertical-gardens .header-container .skewed-header div {
@@ -955,6 +946,37 @@ header nav.showing {
 	font-size: 3rem;
 }
 
+.vertical-gardens .header-container .skewed-header div h2 span {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.vertical-gardens .header-container .skewed-header div h2 span {
+		display: block;
+		padding: 30px 0px;
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.vertical-gardens .header-container .skewed-header div h2 span {
+		z-index: 9;
+	}
+}
+
+.vertical-gardens .header-container .skewed-header div h2 :before {
+	content: '';
+	position: absolute;
+	background-color: #f7f3f3;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	z-index: -10;
+	left: -8%;
+	-ms-transform: skew(-20deg, 0deg);
+	    transform: skew(-20deg, 0deg);
+}
+
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
 	.vertical-gardens .header-container .skewed-header div h2 {
 		font-size: 2rem;
@@ -965,24 +987,6 @@ header nav.showing {
 	.vertical-gardens .header-container .skewed-header div h2 {
 		font-size: 4.75rem;
 		z-index: 10;
-	}
-}
-
-.vertical-gardens .header-container .skewed-header div span {
-	display: none;
-}
-
-@media screen and (min-width: 768px) {
-	.vertical-gardens .header-container .skewed-header div span {
-		display: block;
-		padding: 30px 0px;
-		font-size: 1.4rem;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.vertical-gardens .header-container .skewed-header div span {
-		z-index: 9;
 	}
 }
 
@@ -1419,6 +1423,7 @@ footer {
 	align-content: center;
 	align-items: center;
 	justify-content: center;
+	justify-content: space-around;
 	flex-direction: column;
 }
 
@@ -1431,13 +1436,13 @@ footer {
 
 footer .contact {
 	display: flex;
-	align-items: center;
 	flex-direction: column-reverse;
 }
 
 @media screen and (min-width: 768px) {
 	footer .contact {
 		flex-direction: column;
+		width: 40%;
 	}
 }
 
@@ -1447,28 +1452,23 @@ footer .contact .contact-head {
 
 @media screen and (min-width: 1024px) {
 	footer .contact .contact-head {
-		padding-bottom: 30px;
-		width: 70%;
+		padding-bottom: 8.5%;
 		display: flex;
-		justify-content: center;
 		flex-direction: column;
 	}
 }
 
 footer .contact .contact-head h2 {
-	margin-bottom: 10px;
-	font-size: 1.6rem;
+	margin-bottom: 6.8%;
+	margin-top: 7.72%;
+	font-size: 3rem;
 }
 
 footer .contact .contact-head span {
-	font-size: 1.2rem;
+	font-size: 1rem;
 }
 
 footer .contact .contact-info {
-	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 17.529%;
@@ -1476,23 +1476,14 @@ footer .contact .contact-info {
 
 footer .contact .contact-info .contacts {
 	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-	display: flex;
 	align-items: center;
 	flex-direction: row;
 	padding: 0.542rem 0rem;
 }
 
 footer .contact .contact-info .contacts img {
-	width: 6.66%;
-}
-
-@media screen and (min-width: 768px) {
-	footer .contact .contact-info .contacts {
-		width: 100%;
-	}
+	width: 60px;
+	padding-right: 4.4%;
 }
 
 footer .contact .contact-info .contacts.address img {
@@ -1510,38 +1501,45 @@ footer .contact .contact-info .contacts span {
 	font-size: 1.375rem;
 }
 
+@media screen and (min-width: 768px) {
+	footer .contact .contact-info .contacts {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	footer .contact .contact-info {
+		padding-bottom: 0%;
+	}
+}
+
 footer .contact .social-links {
 	display: flex;
-	justify-content: space-evenly;
 	padding: 11.47% 0rem;
 }
 
 footer .contact .social-links img {
-	width: 12.5%;
+	width: 60px;
+	margin-right: 5%;
 }
 
 footer form {
 	display: none;
 }
 
+@media screen and (min-width: 768px) {
+	footer form {
+		width: 40%;
+	}
+}
+
 @media screen and (min-width: 1024px) {
 	footer form {
-		margin: 50px 0px;
 		display: flex;
 		justify-content: center;
-		width: 67%;
+		width: 40%;
 		flex-direction: column;
 	}
-}
-
-@media screen and (min-width: 1024px) and (min-width: 768px) {
-	footer form {
-		width: 60%;
-		margin: 50px 20px;
-	}
-}
-
-@media screen and (min-width: 1024px) {
 	footer form input {
 		margin: 10px 0px;
 	}
@@ -1551,6 +1549,9 @@ footer form {
 	footer form input.email {
 		height: 50px;
 	}
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
 	footer form div button {
 		position: relative;
 		margin: 20px 0px;
@@ -1558,35 +1559,21 @@ footer form {
 		height: 120px;
 		font-size: 2rem;
 		background-color: #193638;
-		width: 70%;
-	}
-}
-
-@media screen and (min-width: 1024px) and (min-width: 768px) {
-	footer form div button {
+		z-index: 100;
 		width: 60%;
 	}
 }
 
-@media screen and (min-width: 1024px) {
-	footer form div :before {
-		content: '';
-		height: 120px;
-		background-color: #1a3637;
-		position: absolute;
-		width: 37%;
-		top: 0%;
-		right: -19%;
-		-ms-transform: skew(-35deg, 0deg);
-		    transform: skew(-35deg, 0deg);
-	}
-}
-
 @media screen and (min-width: 1024px) and (min-width: 768px) {
 	footer form div :before {
-		width: 41%;
+		content: '';
+		height: 100%;
+		background-color: #1a3637;
+		position: absolute;
+		width: 70%;
 		top: 0%;
-		right: -20%;
+		right: -31%;
+		z-index: -100;
 		-ms-transform: skew(-42deg, 0deg);
 		    transform: skew(-42deg, 0deg);
 	}
