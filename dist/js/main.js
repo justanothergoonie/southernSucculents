@@ -9,4 +9,12 @@ var toggleNav = function toggleNav() {
 };
 
 hamburgerButton.addEventListener('click', toggleNav);
+var dropDownButton = document.querySelector('.plant-dropdown');
+var plantList = document.querySelector('.plant-type-list');
+
+var toggleList = function toggleList() {
+  plantList.classList.toggle('plant-showing');
+};
+
+dropDownButton.addEventListener('click', toggleList);
 //# sourceMappingURL=main.js.map
