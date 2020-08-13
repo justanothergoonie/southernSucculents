@@ -10,10 +10,10 @@ var toggleNav = function toggleNav() {
 
 hamburgerButton.addEventListener('click', toggleNav);
 var dropDownButton = document.querySelector('.plant-dropdown');
-var plantList = document.querySelector('.plant-type-list');
+var codyMenu = document.querySelector('.cody-menu');
 
 var toggleList = function toggleList() {
-  plantList.classList.toggle('plant-showing');
+  codyMenu.classList.toggle('open');
 };
 
 dropDownButton.addEventListener('click', toggleList);

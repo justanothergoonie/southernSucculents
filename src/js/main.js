@@ -13,9 +13,9 @@ hamburgerButton.addEventListener('click', toggleNav);
 
 let dropDownButton = document.querySelector('.plant-dropdown');
 
-let plantList = document.querySelector('.plant-type-list');
+let codyMenu = document.querySelector('.cody-menu');
 
 let toggleList = function () {
-	plantList.classList.toggle('plant-showing');
+	codyMenu.classList.toggle('open');
 };
 dropDownButton.addEventListener('click', toggleList);
