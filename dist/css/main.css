@@ -268,6 +268,10 @@ header nav ul li a .cart {
 	display: none;
 }
 
+header nav ul li .active {
+	border-bottom: solid #ca3203 2px;
+}
+
 header nav.showing {
 	width: 100%;
 	max-width: 100%;
@@ -322,7 +326,7 @@ header nav.showing {
 	z-index: -20;
 }
 
-.banner .skewed-tag {
+.banner a {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -332,34 +336,32 @@ header nav.showing {
 	font-weight: 100;
 	background-color: #ca2706;
 	width: 32%;
-	height: 20%;
 	position: absolute;
 	bottom: -2%;
 	right: 32%;
 	z-index: 2;
-	transition: ease;
+	padding: 0.894rem 0;
 }
 
 @media screen and (min-width: 768px) {
-	.banner .skewed-tag {
+	.banner a {
 		font-size: 2.64rem;
-		width: 28%;
+		width: 13.74rem;
 		bottom: -2%;
 		right: 35%;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.banner .skewed-tag {
-		font-size: 3.51rem;
-		width: 28%;
-		height: 18%;
+	.banner a {
+		font-size: 3.26rem;
+		width: 18.74rem;
 		bottom: 6%;
 		right: 45%;
 	}
 }
 
-.banner .skewed-tag :before {
+.banner a::before {
 	content: '';
 	position: absolute;
 	background-color: #ca2706;
@@ -367,18 +369,25 @@ header nav.showing {
 	height: 100%;
 	top: 0;
 	z-index: -2;
-	left: -12%;
+	left: -10%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
 }
 
 @media screen and (min-width: 768px) {
-	.banner .skewed-tag :before {
+	.banner a::before {
 		left: -10%;
 	}
 }
 
-.banner .skewed-tag :after {
+@media screen and (min-width: 1024px) {
+	.banner a::before {
+		width: 30%;
+		left: -16%;
+	}
+}
+
+.banner a::after {
 	content: '';
 	position: absolute;
 	background-color: #ca2706;
@@ -392,14 +401,16 @@ header nav.showing {
 }
 
 @media screen and (min-width: 768px) {
-	.banner .skewed-tag :after {
+	.banner a::after {
 		right: -10%;
 	}
 }
 
-.banner .skewed-tag a {
-	color: white;
-	z-index: 5;
+@media screen and (min-width: 1024px) {
+	.banner a::after {
+		width: 30%;
+		right: -16%;
+	}
 }
 
 .hero {
