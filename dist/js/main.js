@@ -9,12 +9,19 @@ var toggleNav = function toggleNav() {
 };
 
 hamburgerButton.addEventListener('click', toggleNav);
-var dropDownButton = document.querySelector('.plant-dropdown');
 var codyMenu = document.querySelector('.cody-menu');
+var dropDownButton = document.querySelector('.plant-dropdown');
+var colorMenu = document.querySelector('.color-menu');
 
 var toggleList = function toggleList() {
   codyMenu.classList.toggle('open');
 };
 
 dropDownButton.addEventListener('click', toggleList);
+
+var toggleColor = function toggleColor() {
+  codyMenu.classList.toggle('open-color');
+};
+
+colorMenu.addEventListener('click', toggleColor);
 //# sourceMappingURL=main.js.map

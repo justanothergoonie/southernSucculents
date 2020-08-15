@@ -10,10 +10,20 @@
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="dist/css/main.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+		/>
 	</head>
 
 	<body>
@@ -53,80 +63,132 @@
 					</ul>
 				</nav>
 			</header>
+			<div class="shop-banner"><span>Shop</span></div>
+			<div class="mobile-hero">
+				<div class="mobile-header">
+					<h1>ECHEVERIA</h1>
+					<p>houseplant</p>
+					<span>&dollar;30</span>
+				</div>
+			</div>
+
 			<section class="full-shop">
 				<div class="img-set">
-					<img src="./dist/img/shopEcheveria.png" alt="" />
 					<div class="samples">
-						<img src="./dist/img/sampleOneShop.png" alt="" />
-						<img src="./dist/img/sampleTwoShop.png" alt="" />
-						<img src="./dist/img/sampleThreeShop.png" alt="" />
-						<img src="./dist/img/sampleFourShop.png" alt="" />
+						<div class="mobile-samples">
+							<img src="./dist/img/shopLeftImg.png" alt="" />
+							<img src="./dist/img/shopMiddleImg.png" alt="" />
+							<img src="./dist/img/shopRightImg.png" alt="" />
+						</div>
+						<div class="not-mobile-samples">
+							<div>
+								<img
+									src="./dist/img/shopEcheveria.png"
+									alt=""
+								/>
+							</div>
+							<div>
+								<img
+									src="./dist/img/sampleOneShop.png"
+									alt=""
+								/>
+
+								<img
+									src="./dist/img/sampleTwoShop.png"
+									alt=""
+								/>
+
+								<img
+									src="./dist/img/sampleThreeShop.png"
+									alt=""
+								/>
+
+								<img
+									src="./dist/img/sampleFourShop.png"
+									alt=""
+								/>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="info-set">
-					<ul>
-						<li>Home &sol;</li>
-						<li>Shop &sol;</li>
-						<li class="active">Echeveria</li>
-					</ul>
+					<div class="info-header-holder">
+						<ul class="info-ul">
+							<li>Home &sol;</li>
+							<li>Shop &sol;</li>
+							<li class="active">Echeveria</li>
+						</ul>
+						<div class="not-mobile-header">
+							<h1>ECHEVERIA</h1>
+							<p>houseplant</p>
+							<span>&dollar;30</span>
+						</div>
+					</div>
 
-					<h1>ECHEVERIA</h1>
-					<span>houseplant</span>
-					<span>&dollar;30</span>
 					<p>
 						Echeveria and other non-hardy succulents look amazing in
 						patio planters. Echeveria are originally from Mexico and
 						central America. You can keep them healthy during the
 						cold months by following our <a href="">care plan</a>
 					</p>
-					<div class="cody-menu">
-						<div class="color-menu">
-							<span>Color</span>
-							<span>▶</span>
-						</div>
+					<div class="shop-form">
+						<div class="cody-menu">
+							<div class="color-menu">
+								<p>Color</p>
+								<span>▶</span>
+							</div>
 
-						<ul>
-							<li>
-								<img
-									src="./dist/img/blueEcheveria.png"
-									alt=""
+							<ul class="color-ul">
+								<li>
+									<img
+										src="./dist/img/blueEcheveria.png"
+										alt=""
+									/>
+								</li>
+								<li>
+									<img
+										src="./dist/img/greenEcheveria.png"
+										alt=""
+									/>
+								</li>
+								<li>
+									<img
+										src="./dist/img/purpleEcheveria.png"
+										alt=""
+									/>
+								</li>
+							</ul>
+						</div>
+						<form action="">
+							<div class="qty-holder">
+								<input
+									type="text"
+									name="Qty"
+									id="Qty"
+									value="1"
 								/>
-							</li>
-							<li>
-								<img
-									src="./dist/img/greenEcheveria.png"
-									alt=""
-								/>
-							</li>
-							<li>
-								<img
-									src="./dist/img/purpleEcheveria.png"
-									alt=""
-								/>
-							</li>
-						</ul>
-					</div>
-					<form action="">
-						<input type="text" name="Qty" id="Qty" />
-						<label for="Qty">Qty</label>
-					</form>
-					<div class="skewed-tag">
-						<span>Add to Cart</span>
+								<label for="Qty">Qty</label>
+							</div>
+
+							<button type="submit">
+								<span>Add to Cart</span>
+							</button>
+						</form>
 					</div>
 				</div>
 			</section>
 			<section class="WDV">
 				<div>
 					<img src="./dist/img/weddingsAndEventsSmall.png" alt="" />
-					<h2>WEDDINGS <span> &amp; EVENTS</span></h2>
+					<h3>WEDDINGS <span> &amp; EVENTS</span></h3>
 				</div>
 				<div>
 					<img src="./dist/img/dishGardenSmall.png" alt="" />
-					<h2>DISH GARDENS</h2>
+					<h3>DISH <span>GARDENS</span></h3>
 				</div>
 				<div>
 					<img src="./dist/img/verticalgardensmall.png" alt="" />
-					<h2>VERTICAL GARDENS</h2>
+					<h3>VERTICAL <span>GARDENS</span></h3>
 				</div>
 			</section>
 		</div>
@@ -195,6 +257,9 @@
 				</div>
 			</form>
 		</footer>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="dist/js/slick.js"></script> -->
 		<script src="dist/js/main.js"></script>
 	</body>
 </html>
