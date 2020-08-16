@@ -22,29 +22,43 @@
 				<img src="./dist/img/logo.png" alt="" class="logo" />
 				<div class="mobile-only-container">
 					<img src="./dist/img/shopping-cart.png" alt="" />
-					<div class="hamburger">
-						<div class="line"></div>
-						<div class="line"></div>
-						<div class="line"></div>
+					<div class="hamburger" aria-label="nav-button">
+						<div class="line" aria-label="nav-button"></div>
+						<div class="line" aria-label="nav-button"></div>
+						<div class="line" aria-label="nav-button"></div>
 					</div>
 				</div>
 
 				<nav>
 					<ul>
 						<div>
-							<li><a href="index.html">HOME</a></li>
 							<li>
-								<a href="plants.html" class="active">PLANTS</a>
+								<a href="./index.html" aria-label="Home">
+									HOME
+								</a>
 							</li>
-							<li><a href="shop.html">SHOP</a></li>
+							<li>
+								<a
+									href="./plants.html"
+									class="active"
+									aria-label="Plants"
+								>
+									PLANTS
+								</a>
+							</li>
+							<li>
+								<a href="./shop.html" aria-label="Shop">SHOP</a>
+							</li>
 						</div>
 						<div>
 							<li>
-								<a href="">WEDDINGS&sol;<span>EVENTS</span></a>
+								<a href="" aria-label="Weddings and Events">
+									WEDDINGS&sol;<span>EVENTS</span>
+								</a>
 							</li>
 							<li>
-								<a href=""
-									>CART
+								<a href="" aria-label="Cart">
+									CART
 									<img
 										src="./dist/img/shopping-cart.png"
 										alt=""
@@ -56,7 +70,7 @@
 				</nav>
 			</header>
 			<section class="plants-banner">
-				<img src="./dist/img/mobileShop.png" alt="" />
+				<img src="./dist/img/mobileShop.png" alt="potted succulent" />
 			</section>
 			<div class="featured-header">
 				<span>Home / Shop</span>
@@ -64,20 +78,20 @@
 			</div>
 			<section class="featured">
 				<div class="cody-menu">
-					<div class="plant-dropdown">
+					<div class="plant-dropdown" aria-label="menu">
 						<h2>Featured</h2>
 						<span>▶</span>
 					</div>
 
 					<ul>
-						<li>View All</li>
-						<li class="active">Featured</li>
-						<li>Houseplants</li>
-						<li>Outdoor Plants</li>
-						<li>Dish Gardens</li>
-						<li>Vertical Gardens</li>
-						<li>Gifts</li>
-						<li>Sale</li>
+						<li aria-label="">View All</li>
+						<li class="active" aria-label="Featured">Featured</li>
+						<li aria-label="Houseplants">Houseplants</li>
+						<li aria-label="Outdoor Plants">Outdoor Plants</li>
+						<li aria-label="Dish Gardens">Dish Gardens</li>
+						<li aria-label="Vertical Gardens">Vertical Gardens</li>
+						<li aria-label="Gifts">Gifts</li>
+						<li aria-label="Sale">Sale</li>
 					</ul>
 				</div>
 
@@ -187,15 +201,21 @@
 					<span>We Want to hear from you&excl;</span>
 				</div>
 				<div class="contact-info">
-					<div class="contacts phone">
+					<div class="contacts phone" aria-label="4048888181">
 						<img src="./dist/img/phone.png" alt="" />
 						<span>404.&Tab;888.&Tab;8181</span>
 					</div>
-					<div class="contacts email">
+					<div
+						class="contacts email"
+						aria-label="info@southeastsucculents.com"
+					>
 						<img src="./dist/img/email.png" alt="" />
 						<span>info&commat;southeastsucculents.com</span>
 					</div>
-					<div class="contacts address">
+					<div
+						class="contacts address"
+						aria-label="Krog Street Market, Atlanta, GA, 30307"
+					>
 						<img src="./dist/img/pin.png" alt="" />
 						<div class="address-info">
 							<span>Krog Street Market</span>
@@ -205,11 +225,20 @@
 					</div>
 				</div>
 				<div class="social-links">
-					<img src="./dist/img/facebook.png" alt="" />
-					<img src="./dist/img/twitter.png" alt="" />
+					<img
+						src="./dist/img/facebook.png"
+						alt="facebook logo"
+						aria-label="facebook link"
+					/>
+					<img
+						src="./dist/img/twitter.png"
+						alt="twitter logo"
+						aria-label="twitter link"
+					/>
 					<img
 						src="./dist/img/instagram-social-network-logo-of-photo-camera.png"
-						alt=""
+						alt="instagram logo"
+						aria-label="instagram link"
 					/>
 				</div>
 			</div>

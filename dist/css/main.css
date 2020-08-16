@@ -2149,6 +2149,7 @@ footer .contact .contact-info {
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 17.529%;
+	padding-top: 15%;
 }
 
 footer .contact .contact-info .contacts {

@@ -32,26 +32,41 @@
 				<img src="./dist/img/logo.png" alt="" class="logo" />
 				<div class="mobile-only-container">
 					<img src="./dist/img/shopping-cart.png" alt="" />
-					<div class="hamburger">
-						<div class="line"></div>
-						<div class="line"></div>
-						<div class="line"></div>
+					<div class="hamburger" aria-label="nav-button">
+						<div class="line" aria-label="nav-button"></div>
+						<div class="line" aria-label="nav-button"></div>
+						<div class="line" aria-label="nav-button"></div>
 					</div>
 				</div>
 
 				<nav>
 					<ul>
 						<div>
-							<li><a href="index.html">HOME</a></li>
-							<li><a href="plants.html">PLANTS</a></li>
-							<li><a href="shop.html" class="active">SHOP</a></li>
+							<li>
+								<a href="index.html" aria-label="Home">HOME</a>
+							</li>
+							<li>
+								<a href="plants.html" aria-label="Plants"
+									>PLANTS</a
+								>
+							</li>
+							<li>
+								<a
+									href="shop.html"
+									class="active"
+									aria-label="Shop"
+									>SHOP</a
+								>
+							</li>
 						</div>
 						<div>
 							<li>
-								<a href="">WEDDINGS&sol;<span>EVENTS</span></a>
+								<a href="" aria-label="Weddings & Events"
+									>WEDDINGS&sol;<span>EVENTS</span></a
+								>
 							</li>
 							<li>
-								<a href=""
+								<a href="" aria-label="cart"
 									>CART
 									<img
 										src="./dist/img/shopping-cart.png"
@@ -76,36 +91,45 @@
 				<div class="img-set">
 					<div class="samples">
 						<div class="mobile-samples">
-							<img src="./dist/img/shopLeftImg.png" alt="" />
-							<img src="./dist/img/shopMiddleImg.png" alt="" />
-							<img src="./dist/img/shopRightImg.png" alt="" />
+							<img
+								src="./dist/img/shopLeftImg.png"
+								alt="purple potted Echeveria"
+							/>
+							<img
+								src="./dist/img/shopMiddleImg.png"
+								alt="green Echeveria"
+							/>
+							<img
+								src="./dist/img/shopRightImg.png"
+								alt="green potted Echeveria"
+							/>
 						</div>
 						<div class="not-mobile-samples">
 							<div>
 								<img
 									src="./dist/img/shopEcheveria.png"
-									alt=""
+									alt=" green Echeveria"
 								/>
 							</div>
 							<div>
 								<img
 									src="./dist/img/sampleOneShop.png"
-									alt=""
+									alt="green potted Echeveria"
 								/>
 
 								<img
 									src="./dist/img/sampleTwoShop.png"
-									alt=""
+									alt="arrangement of Echeveria"
 								/>
 
 								<img
 									src="./dist/img/sampleThreeShop.png"
-									alt=""
+									alt="purple Echeveria"
 								/>
 
 								<img
 									src="./dist/img/sampleFourShop.png"
-									alt=""
+									alt="purple potted Echeveria"
 								/>
 							</div>
 						</div>
@@ -114,9 +138,11 @@
 				<div class="info-set">
 					<div class="info-header-holder">
 						<ul class="info-ul">
-							<li>Home &sol;</li>
-							<li>Shop &sol;</li>
-							<li class="active">Echeveria</li>
+							<li aria-label="home">Home &sol;</li>
+							<li aria-label="shop">Shop &sol;</li>
+							<li class="active" aria-label="Echeveria">
+								Echeveria
+							</li>
 						</ul>
 						<div class="not-mobile-header">
 							<h1>ECHEVERIA</h1>
@@ -133,25 +159,25 @@
 					</p>
 					<div class="shop-form">
 						<div class="cody-menu">
-							<div class="color-menu">
+							<div class="color-menu" aria-label="color menu">
 								<p>Color</p>
 								<span>▶</span>
 							</div>
 
-							<ul class="color-ul">
-								<li>
+							<ul class="color-ul" aria-label="color options">
+								<li aria-label="Blue Echeveria">
 									<img
 										src="./dist/img/blueEcheveria.png"
 										alt=""
 									/>
 								</li>
-								<li>
+								<li aria-label="Green Echeveria">
 									<img
 										src="./dist/img/greenEcheveria.png"
 										alt=""
 									/>
 								</li>
-								<li>
+								<li aria-label="Purple Echeveria">
 									<img
 										src="./dist/img/purpleEcheveria.png"
 										alt=""
@@ -166,11 +192,12 @@
 									name="Qty"
 									id="Qty"
 									value="1"
+									aria-label="Quantity"
 								/>
 								<label for="Qty">Qty</label>
 							</div>
 
-							<button type="submit">
+							<button type="submit" aria-label="Add to cart">
 								<span>Add to Cart</span>
 							</button>
 						</form>
@@ -179,15 +206,24 @@
 			</section>
 			<section class="WDV">
 				<div>
-					<img src="./dist/img/weddingsAndEventsSmall.png" alt="" />
+					<img
+						src="./dist/img/weddingsAndEventsSmall.png"
+						alt="arrangement of succulents"
+					/>
 					<h3>WEDDINGS <span> &amp; EVENTS</span></h3>
 				</div>
 				<div>
-					<img src="./dist/img/dishGardenSmall.png" alt="" />
+					<img
+						src="./dist/img/dishGardenSmall.png"
+						alt=" dish garden succulents"
+					/>
 					<h3>DISH <span>GARDENS</span></h3>
 				</div>
 				<div>
-					<img src="./dist/img/verticalgardensmall.png" alt="" />
+					<img
+						src="./dist/img/verticalgardensmall.png"
+						alt=" vertical garden succulents"
+					/>
 					<h3>VERTICAL <span>GARDENS</span></h3>
 				</div>
 			</section>
@@ -199,15 +235,21 @@
 					<span>We Want to hear from you&excl;</span>
 				</div>
 				<div class="contact-info">
-					<div class="contacts phone">
+					<div class="contacts phone" aria-label="4048888181">
 						<img src="./dist/img/phone.png" alt="" />
 						<span>404.&Tab;888.&Tab;8181</span>
 					</div>
-					<div class="contacts email">
+					<div
+						class="contacts email"
+						aria-label="info@southeastsucculents.com"
+					>
 						<img src="./dist/img/email.png" alt="" />
 						<span>info&commat;southeastsucculents.com</span>
 					</div>
-					<div class="contacts address">
+					<div
+						class="contacts address"
+						aria-label="Krog Street Market, Atlanta, GA, 30307"
+					>
 						<img src="./dist/img/pin.png" alt="" />
 						<div class="address-info">
 							<span>Krog Street Market</span>
@@ -217,11 +259,20 @@
 					</div>
 				</div>
 				<div class="social-links">
-					<img src="./dist/img/facebook.png" alt="" />
-					<img src="./dist/img/twitter.png" alt="" />
+					<img
+						src="./dist/img/facebook.png"
+						alt="facebook logo"
+						aria-label="facebook link"
+					/>
+					<img
+						src="./dist/img/twitter.png"
+						alt="twitter logo"
+						aria-label="twitter link"
+					/>
 					<img
 						src="./dist/img/instagram-social-network-logo-of-photo-camera.png"
-						alt=""
+						alt="instagram logo"
+						aria-label="instagram link"
 					/>
 				</div>
 			</div>
