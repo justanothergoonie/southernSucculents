@@ -125,6 +125,7 @@ header {
 }
 .banner {
 	position: relative;
+
 	img {
 		width: 100%;
 		margin-top: 20px;
@@ -200,6 +201,7 @@ header {
 //start home page
 .hero {
 	position: relative;
+
 	@include bp-large {
 		display: flex;
 	}
@@ -243,6 +245,7 @@ header {
 		}
 	}
 }
+
 .wedding-events {
 	position: relative;
 	@include flex-center;
