@@ -10,7 +10,6 @@ header {
 		right: 1rem;
 		top: 1rem;
 		z-index: 3;
-
 		@include bp-large {
 			display: none;
 		}
@@ -29,17 +28,16 @@ header {
 			padding: 0;
 			color: #f7f3f2;
 			border: none;
-			// border: #435a5c solid 1px;
+
 			.line {
 				width: 75%;
 				height: 12%;
-				// border: #435a5c solid 1px;
+
 				margin: 10%;
 				background-color: black;
 			}
 		}
 	}
-
 	.logo {
 		width: 200px;
 		align-self: center;
@@ -47,11 +45,11 @@ header {
 		top: 1.5rem;
 		z-index: 2;
 	}
-
 	nav {
 		font-size: 1.5rem;
 		font-weight: 100;
-		display: block;
+		display: flex;
+		justify-content: flex-end;
 		position: fixed;
 		right: 1rem;
 		top: 5rem;
@@ -73,7 +71,6 @@ header {
 						-2px 2px 0 #ffffff, -2px -2px 0 #ffffff,
 						2px 0px 0 #ffffff, 0px 2px 0 #ffffff, -2px 0px 0 #ffffff,
 						0px -2px 0 #ffffff, 2px 2px 0px rgba(0, 0, 0, 0);
-
 					.cart {
 						display: none;
 					}
@@ -84,7 +81,7 @@ header {
 			}
 		}
 		&.showing {
-			width: 100%;
+			width: 20%;
 			max-width: 100%;
 		}
 		@include bp-large {
@@ -93,7 +90,6 @@ header {
 			top: -6.5rem;
 			max-width: 100%;
 			ul {
-				// @include flex-center;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
@@ -125,26 +121,28 @@ header {
 }
 .banner {
 	position: relative;
-
 	img {
 		width: 100%;
 		margin-top: 20px;
 		z-index: -20;
 	}
 	a {
+		@include iPhone-x {
+			width: 37%;
+		}
 		@include flex-center;
 		font-size: 1.71rem;
 		color: white;
 		font-weight: 100;
 		background-color: #ca2706;
 		width: 32%;
-		// height: 20%;
+
 		position: absolute;
 		bottom: -2%;
 		right: 32%;
 		z-index: 2;
 		padding: 0.894rem 0;
-		// transition: ease;
+
 		@include bp-med {
 			font-size: 2.64rem;
 			width: 13.74rem;
@@ -154,15 +152,19 @@ header {
 		@include bp-large {
 			font-size: 3.26rem;
 			width: 18.74rem;
-			// height: 18%;
+
 			bottom: 6%;
 			right: 45%;
+			padding: 0 0;
 		}
 		@include bp-ld {
 		}
 	}
 	a::before {
 		content: '';
+		@include iPhone-x {
+			width: 37%;
+		}
 		position: absolute;
 		background-color: #ca2706;
 		width: 20%;
@@ -181,6 +183,9 @@ header {
 	}
 	a::after {
 		content: '';
+		@include iPhone-x {
+			width: 37%;
+		}
 		position: absolute;
 		background-color: #ca2706;
 		width: 20%;
@@ -201,7 +206,6 @@ header {
 //start home page
 .hero {
 	position: relative;
-
 	@include bp-large {
 		display: flex;
 	}
@@ -238,7 +242,6 @@ header {
 		@include bp-large {
 			display: flex;
 			position: absolute;
-			position: absolute;
 			bottom: 25%;
 			left: 65%;
 			overflow: hidden;
@@ -249,7 +252,7 @@ header {
 	position: relative;
 	@include flex-center;
 	flex-direction: column;
-	// position: relative;
+
 	@include bp-large {
 		flex-direction: row;
 		justify-content: flex-end;
@@ -258,7 +261,6 @@ header {
 		width: 100%;
 		@include bp-large {
 			width: 66.032%;
-
 			left: 0;
 			top: 0;
 			z-index: -7;
@@ -270,7 +272,6 @@ header {
 		@include bp-large {
 			width: 37.11%;
 		}
-
 		.skewed-header {
 			position: relative;
 			margin: 50px 0px 220px 0px;
@@ -321,7 +322,7 @@ header {
 			flex-direction: column;
 			position: absolute;
 			bottom: 30%;
-			right: 33%;
+			right: 25%;
 			color: #fff;
 			font-size: 1.91rem;
 			font-weight: 100;
@@ -343,7 +344,6 @@ header {
 			@include bp-ld {
 				right: 64.5%;
 			}
-
 			.bp-med-only {
 				display: none;
 				@include bp-med {
@@ -386,7 +386,9 @@ header {
 	@include bp-large {
 		justify-content: flex-start;
 		flex-direction: row-reverse;
-		// margin-top: 19%;
+	}
+	@include bp-ld {
+		margin-top: -5%;
 	}
 	img {
 		width: 100%;
@@ -399,7 +401,6 @@ header {
 		@include bp-large {
 			width: 43.92%;
 		}
-
 		.skewed-header {
 			margin: 50px 0px 220px 0px;
 			position: relative;
@@ -410,7 +411,6 @@ header {
 				@include flex-center;
 				flex-direction: column;
 				@include bp-large {
-					// text-align: right;
 					align-items: flex-start;
 				}
 				h2 {
@@ -457,13 +457,13 @@ header {
 		}
 		a {
 			@include flex-center;
-			// position: relative;
+
 			color: #fff;
 			background-color: #fda50d;
 			position: absolute;
 			flex-direction: column;
 			bottom: 30%;
-			right: 33%;
+			right: 18%;
 			font-size: 1.91rem;
 			font-weight: 100;
 			z-index: 10;
@@ -485,11 +485,6 @@ header {
 				left: 69.5%;
 			}
 
-			span {
-				@include bp-large {
-					// padding-top: 0.675rem;
-				}
-			}
 			.bp-med-only {
 				display: none;
 				@include bp-med {
@@ -544,7 +539,6 @@ header {
 		width: 100%;
 		@include bp-large {
 			width: 66.03%;
-
 			z-index: -10000;
 		}
 	}
@@ -553,7 +547,6 @@ header {
 		@include bp-large {
 			width: 37.8%;
 		}
-
 		.skewed-header {
 			margin: 50px 0px 220px 0px;
 			position: relative;
@@ -569,7 +562,6 @@ header {
 				h2 {
 					font-weight: 100;
 					font-size: 3rem;
-
 					@include bp-med {
 						text-align: center;
 					}
@@ -578,7 +570,6 @@ header {
 					}
 					span {
 						display: none;
-
 						@include bp-med {
 							display: block;
 							padding: 1.42rem 0;
@@ -616,7 +607,7 @@ header {
 			bottom: 30%;
 			font-size: 1.91rem;
 			font-weight: 100;
-			right: 33%;
+			right: 25%;
 			background-color: #6e352d;
 			color: #fff;
 			z-index: 10;
@@ -637,7 +628,6 @@ header {
 				bottom: 21%;
 				right: 62.5%;
 			}
-
 			.bp-med-only {
 				display: none;
 				@include bp-med {
@@ -678,15 +668,16 @@ header {
 	@include flex-center;
 	flex-direction: column;
 	margin-top: 15%;
-
 	h2 {
+		@include iPhone-x {
+			text-align: center;
+		}
 		font-size: 2.7rem;
 		font-weight: 100;
 		@include bp-med {
 			font-size: 3.75rem;
 		}
 	}
-
 	.all-shop-container {
 		@include flex-center;
 		flex-direction: column;
@@ -707,117 +698,116 @@ header {
 		}
 		.first-set-container {
 			display: flex;
+			flex-direction: row-reverse;
 			justify-content: center;
 			align-items: baseline;
+			@include iPhone-x {
+				width: 100%;
+			}
+			@include bp-med {
+				flex-direction: row;
+			}
 			@include bp-large {
 				padding-right: 4.02%;
 				align-items: end;
 			}
-
 			.first-shop {
-				width: 100%;
 				@include flex-center;
 				flex-direction: column;
-				padding-right: 9.333%;
-				@include bp-med {
-					padding-right: 21.83%;
+
+				@include iPhone-x {
+					width: 50%;
 				}
+
 				@include bp-large {
-					padding-right: 9.333%;
 					flex-direction: column-reverse;
 				}
-				a {
-					.skewed-tag {
-						position: relative;
-						@include flex-center;
-						width: 175px;
-						height: 50px;
-						color: #fff;
-						background-color: #fa4407;
-
-						@include iPhone-x {
-							width: 160px;
-						}
-						div {
-							:before {
-								content: '';
-								position: absolute;
-								background-color: #fa4407;
-								width: 10%;
-								height: 100%;
-								bottom: 0;
-								left: -5%;
-								transform: skew(20deg, 0deg);
-								@include bp-large {
-								}
-							}
-							:after {
-								content: '';
-								position: absolute;
-								background-color: #fa4407;
-								width: 10%;
-								height: 100%;
-								bottom: 0;
-								right: -5%;
-								transform: skew(20deg, 0deg);
-								@include bp-large {
-								}
-							}
-						}
+				img {
+					@include iPhone-x {
+						width: 70%;
+						padding-bottom: 0.876rem;
 					}
 				}
-			}
+				a {
+					@include iPhone-x {
+						width: 54.666%;
+					}
+					position: relative;
+					@include flex-center;
 
+					color: #fff;
+					background-color: #fa4407;
+				}
+				a::before {
+					content: '';
+					position: absolute;
+					background-color: #fa4407;
+					width: 50%;
+					height: 100%;
+					bottom: 0;
+					left: -11%;
+					transform: skew(20deg, 0deg);
+					z-index: -2;
+				}
+				a::after {
+					content: '';
+					position: absolute;
+					background-color: #fa4407;
+					width: 50%;
+					height: 100%;
+					bottom: 0;
+					right: -11%;
+					transform: skew(20deg, 0deg);
+					z-index: -2;
+				}
+			}
 			.second-shop {
 				@include flex-center;
 				flex-direction: column;
-				width: 100%;
-				padding-left: 9.333%;
-				@include bp-med {
-					padding-left: 21.83%;
+				@include iPhone-x {
+					width: 50%;
 				}
+
 				@include bp-large {
-					padding-left: 9.333%;
 					flex-direction: column-reverse;
 				}
-				a {
-					.skewed-tag {
-						@include flex-center;
-						position: relative;
-						width: 175px;
-						height: 50px;
-						color: #fff;
-						background-color: #4b858c;
-						@include iPhone-x {
-							width: 160px;
-						}
-						div {
-							:before {
-								content: '';
-								position: absolute;
-								background-color: #4b858c;
-								width: 15%;
-								height: 100%;
-								bottom: 0;
-								left: -6%;
-								transform: skew(25deg, 0deg);
-								@include bp-large {
-								}
-							}
-							:after {
-								content: '';
-								position: absolute;
-								background-color: #4b858c;
-								width: 15%;
-								height: 100%;
-								bottom: 0;
-								right: -6.5%;
-								transform: skew(-25deg, 0deg);
-								@include bp-large {
-								}
-							}
-						}
+				img {
+					@include iPhone-x {
+						width: 70%;
+						padding-bottom: 0.876rem;
 					}
+				}
+				a {
+					@include iPhone-x {
+						width: 56.8%;
+					}
+					@include flex-center;
+					position: relative;
+
+					color: #fff;
+					background-color: #4b858c;
+				}
+				a::before {
+					content: '';
+					position: absolute;
+					background-color: #4b858c;
+					width: 50%;
+					height: 100%;
+					bottom: 0;
+					left: -11%;
+					transform: skew(20deg, 0deg);
+					z-index: -2;
+				}
+				a::after {
+					content: '';
+					position: absolute;
+					background-color: #4b858c;
+					width: 50%;
+					height: 100%;
+					bottom: 0;
+					right: -11%;
+					transform: skew(-20deg, 0deg);
+					z-index: -2;
 				}
 			}
 		}
@@ -825,113 +815,116 @@ header {
 			display: flex;
 			justify-content: center;
 			align-items: baseline;
+			@include iPhone-x {
+				width: 100%;
+			}
 			@include bp-large {
-				padding-left: 4.02%;
 				align-items: end;
 			}
-
 			.third-shop {
 				@include flex-center;
 				flex-direction: column;
-				width: 100%;
-				padding-right: 9.333%;
-				@include bp-med {
-					padding-right: 21.83%;
+				@include iPhone-x {
+					width: 50%;
 				}
+
 				@include bp-large {
-					padding-right: 9.333%;
 					flex-direction: column-reverse;
 				}
+				img {
+					@include iPhone-x {
+						width: 60%;
+						padding-bottom: 0.876rem;
+					}
+				}
 				a {
-					.skewed-tag {
-						position: relative;
-						@include flex-center;
-						font-size: 1.25rem;
-						width: 175px;
-						height: 50px;
-						color: #000;
-						background-color: #fda50d;
-						@include iPhone-x {
-							width: 160px;
-						}
-						div {
-							:before {
-								content: '';
-								position: absolute;
-								background-color: #fda50d;
-								width: 10%;
-								height: 100%;
-								bottom: 0;
-								left: -5%;
-								transform: skew(-20deg, 0deg);
-								@include bp-large {
-								}
-							}
-							:after {
-								content: '';
-								position: absolute;
-								background-color: #fda50d;
-								width: 10%;
-								height: 100%;
-								bottom: 0;
-								right: -5%;
-								transform: skew(-20deg, 0deg);
-								@include bp-large {
-								}
-							}
-						}
+					@include iPhone-x {
+						width: 60%;
+					}
+					position: relative;
+					@include flex-center;
+					font-size: 1.25rem;
+
+					color: #000;
+					background-color: #fda50d;
+				}
+				a::before {
+					content: '';
+					position: absolute;
+					background-color: #fda50d;
+					width: 50%;
+					height: 100%;
+					bottom: 0;
+					left: -23%;
+					transform: skew(-20deg, 0deg);
+					z-index: -2;
+					@include bp-large {
+					}
+				}
+				a::after {
+					content: '';
+					position: absolute;
+					background-color: #fda50d;
+					width: 50%;
+					height: 100%;
+					bottom: 0;
+					right: -23%;
+					transform: skew(-20deg, 0deg);
+					z-index: -2;
+					@include bp-large {
 					}
 				}
 			}
 			.fourth-shop {
 				@include flex-center;
 				flex-direction: column;
-				width: 100%;
-				padding-left: 9.333%;
-				@include bp-med {
-					padding-left: 21.83%;
+				@include iPhone-x {
+					width: 50%;
 				}
+
 				@include bp-large {
-					padding-left: 9.333%;
 					flex-direction: column-reverse;
 				}
+				img {
+					@include iPhone-x {
+						width: 80%;
+						padding-bottom: 0.876rem;
+					}
+				}
 				a {
-					.skewed-tag {
-						@include flex-center;
-						position: relative;
-						width: 175px;
-						height: 50px;
-						color: #000;
-						background-color: #a1bbab;
-						@include iPhone-x {
-							width: 160px;
-						}
-						div {
-							:before {
-								content: '';
-								position: absolute;
-								background-color: #a1bbab;
-								width: 15%;
-								height: 100%;
-								bottom: 0;
-								left: -6%;
-								transform: skew(-25deg, 0deg);
-								@include bp-large {
-								}
-							}
-							:after {
-								content: '';
-								position: absolute;
-								background-color: #a1bbab;
-								width: 15%;
-								height: 100%;
-								bottom: 0;
-								right: -6.5%;
-								transform: skew(25deg, 0deg);
-								@include bp-large {
-								}
-							}
-						}
+					@include iPhone-x {
+						width: 73.333%;
+					}
+					@include flex-center;
+					position: relative;
+
+					color: #000;
+					background-color: #a1bbab;
+				}
+				a::before {
+					content: '';
+					position: absolute;
+					background-color: #a1bbab;
+					width: 50%;
+					height: 100%;
+					bottom: 0;
+					left: -9%;
+					transform: skew(-25deg, 0deg);
+					z-index: -2;
+					@include bp-large {
+					}
+				}
+				a::after {
+					content: '';
+					position: absolute;
+					background-color: #a1bbab;
+					width: 50%;
+					height: 100%;
+					bottom: 0;
+					right: -9%;
+					transform: skew(25deg, 0deg);
+					z-index: -2;
+					@include bp-large {
 					}
 				}
 			}
@@ -939,7 +932,6 @@ header {
 	}
 }
 // end home page
-
 //start plants page
 .featured-header {
 	display: none;
@@ -982,12 +974,10 @@ header {
 			display: flex;
 			height: 2.315rem;
 			justify-content: center;
-
 			background-color: #ca2706;
 			@include bp-med {
 				display: none;
 			}
-
 			h2 {
 				font-size: 1.625rem;
 				margin: auto 33.333%;
@@ -999,11 +989,10 @@ header {
 				transition: 0.5s linear;
 			}
 		}
-
 		ul {
 			display: none;
 			opacity: 0;
-			// animation: fadeOut 1s ease 1;
+
 			@include bp-med {
 				display: flex;
 				flex-direction: column;
@@ -1018,7 +1007,6 @@ header {
 				justify-content: center;
 				background-color: #ca2706;
 				border-top: 1px solid black;
-
 				@include bp-med {
 					background-color: rgba(0, 0, 0, 0);
 					border: none;
@@ -1048,13 +1036,11 @@ header {
 		@include flex-center;
 		flex-direction: row;
 		flex-wrap: wrap;
-		// width: 100%;
+
 		@include bp-med {
-			// width: 85%;
 			margin-top: 3.401rem;
 		}
 		@include bp-large {
-			// width: 72%;
 		}
 		.product {
 			@include flex-center;
@@ -1073,7 +1059,7 @@ header {
 			}
 			p {
 				font-family: 'Roboto', sans-serif;
-				// font-weight: regular;
+
 				font-size: 1.525rem;
 				@include bp-med {
 					font-size: 0.987rem;
@@ -1261,7 +1247,6 @@ header {
 				}
 			}
 		}
-
 		p {
 			font-size: 1.375rem;
 			margin: 2rem 4rem;
@@ -1274,7 +1259,6 @@ header {
 			.cody-menu {
 				display: flex;
 				flex-direction: column;
-
 				.color-menu {
 					display: flex;
 					align-items: center;
@@ -1320,7 +1304,6 @@ header {
 						font-size: 1.5rem;
 					}
 				}
-
 				button {
 					position: relative;
 					background-color: #ffa202;
@@ -1433,10 +1416,6 @@ header {
 					}
 				}
 			}
-
-			// flex-direction: row;
-
-			// overflow: hidden;
 		}
 	}
 }
@@ -1446,7 +1425,6 @@ footer {
 	background-image: url(/dist/img/triangles2.png);
 	background-repeat: no-repeat;
 	background-position: right bottom;
-
 	@include flex-center;
 	justify-content: space-around;
 	flex-direction: column;
@@ -1456,24 +1434,18 @@ footer {
 	}
 	.contact {
 		display: flex;
-
 		flex-direction: column-reverse;
-
 		@include bp-med {
 			flex-direction: column;
 			width: 40%;
 		}
-
 		.contact-head {
 			display: none;
 			@include bp-large {
 				padding-bottom: 8.5%;
-
 				display: flex;
-
 				flex-direction: column;
 			}
-
 			h2 {
 				margin-bottom: 6.8%;
 				margin-top: 7.72%;
@@ -1486,10 +1458,15 @@ footer {
 		.contact-info {
 			display: flex;
 			flex-direction: column;
-			padding-bottom: 17.529%;
-			padding-top: 15%;
+			@include iPhone-x {
+				width: 100%;
+				padding: 15% 0% 17.529% 5%;
+			}
+			@include bp-med {
+				padding: 15% 0% 17.529% 0%;
+			}
+
 			.contacts {
-				// margin-left: 20.97%;
 				display: flex;
 				align-items: center;
 				flex-direction: row;
@@ -1498,7 +1475,6 @@ footer {
 					width: 60px;
 					padding-right: 4.4%;
 				}
-
 				&.address {
 					img {
 						padding-bottom: 3.8rem;
@@ -1511,31 +1487,26 @@ footer {
 				}
 				span {
 					padding-left: 0.668rem;
-					font-size: 1.375rem;
+					font-size: 1.175rem;
 				}
 				@include bp-med {
 					width: 100%;
-					// margin-left: 30.93%;
 				}
 			}
 			@include bp-med {
 				padding-bottom: 0%;
 			}
 		}
-
 		.social-links {
 			display: flex;
-			// width: 67%;
-			// justify-content: space-evenly;
+
 			padding: 11.47% 0rem;
-
 			img {
-				width: 60px;
-				margin-right: 5%;
-			}
-
-			@include bp-med {
-				// width: 88%;
+				@include iPhone-x {
+					width: 5rem;
+					height: 5rem;
+					margin: 5%;
+				}
 			}
 		}
 	}
@@ -1543,19 +1514,15 @@ footer {
 		display: none;
 		@include bp-med {
 			width: 40%;
-			// margin: 50px 20px;
 		}
 		@include bp-large {
-			// margin: 50px 0px;
 			display: flex;
 			justify-content: center;
 			width: 40%;
 			flex-direction: column;
-
 			input {
 				margin: 10px 0px;
 				&.name {
-					// width: 50%;
 					height: 50px;
 				}
 				&.email {

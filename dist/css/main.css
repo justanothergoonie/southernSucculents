@@ -240,7 +240,8 @@ header .logo {
 header nav {
 	font-size: 1.5rem;
 	font-weight: 100;
-	display: block;
+	display: flex;
+	justify-content: flex-end;
 	position: fixed;
 	right: 1rem;
 	top: 5rem;
@@ -273,7 +274,7 @@ header nav ul li .active {
 }
 
 header nav.showing {
-	width: 100%;
+	width: 20%;
 	max-width: 100%;
 }
 
@@ -343,6 +344,12 @@ header nav.showing {
 	padding: 0.894rem 0;
 }
 
+@media screen and (min-width: 375px) {
+	.banner a {
+		width: 37%;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.banner a {
 		font-size: 2.64rem;
@@ -358,6 +365,7 @@ header nav.showing {
 		width: 18.74rem;
 		bottom: 6%;
 		right: 45%;
+		padding: 0 0;
 	}
 }
 
@@ -372,6 +380,12 @@ header nav.showing {
 	left: -10%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
+}
+
+@media screen and (min-width: 375px) {
+	.banner a::before {
+		width: 37%;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -398,6 +412,12 @@ header nav.showing {
 	right: -12%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
+}
+
+@media screen and (min-width: 375px) {
+	.banner a::after {
+		width: 37%;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -470,7 +490,6 @@ header nav.showing {
 @media screen and (min-width: 1024px) {
 	.hero img {
 		display: flex;
-		position: absolute;
 		position: absolute;
 		bottom: 25%;
 		left: 65%;
@@ -560,7 +579,7 @@ header nav.showing {
 	font-size: 2.8rem;
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media screen and (min-width: 375px) {
 	.wedding-events .header-container .skewed-header div h2 {
 		font-size: 2rem;
 	}
@@ -594,7 +613,7 @@ header nav.showing {
 	flex-direction: column;
 	position: absolute;
 	bottom: 30%;
-	right: 33%;
+	right: 25%;
 	color: #fff;
 	font-size: 1.91rem;
 	font-weight: 100;
@@ -683,6 +702,12 @@ header nav.showing {
 	.dish-gardens {
 		justify-content: flex-start;
 		flex-direction: row-reverse;
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	.dish-gardens {
+		margin-top: -5%;
 	}
 }
 
@@ -775,7 +800,7 @@ header nav.showing {
 	    transform: skew(20deg, 0deg);
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media screen and (min-width: 375px) {
 	.dish-gardens .header-container .skewed-header div h2 {
 		font-size: 2rem;
 	}
@@ -798,7 +823,7 @@ header nav.showing {
 	position: absolute;
 	flex-direction: column;
 	bottom: 30%;
-	right: 33%;
+	right: 18%;
 	font-size: 1.91rem;
 	font-weight: 100;
 	z-index: 10;
@@ -997,7 +1022,7 @@ header nav.showing {
 	    transform: skew(-20deg, 0deg);
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media screen and (min-width: 375px) {
 	.vertical-gardens .header-container .skewed-header div h2 {
 		font-size: 2rem;
 	}
@@ -1020,7 +1045,7 @@ header nav.showing {
 	bottom: 30%;
 	font-size: 1.91rem;
 	font-weight: 100;
-	right: 33%;
+	right: 25%;
 	background-color: #6e352d;
 	color: #fff;
 	z-index: 10;
@@ -1110,6 +1135,12 @@ header nav.showing {
 	font-weight: 100;
 }
 
+@media screen and (min-width: 375px) {
+	.shop-by h2 {
+		text-align: center;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.shop-by h2 {
 		font-size: 3.75rem;
@@ -1131,7 +1162,7 @@ header nav.showing {
 	padding: 0.876rem 0%;
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media screen and (min-width: 375px) {
 	.shop-by .all-shop-container {
 		font-size: 1.2rem;
 	}
@@ -1148,8 +1179,21 @@ header nav.showing {
 
 .shop-by .all-shop-container .first-set-container {
 	display: flex;
+	flex-direction: row-reverse;
 	justify-content: center;
 	align-items: baseline;
+}
+
+@media screen and (min-width: 375px) {
+	.shop-by .all-shop-container .first-set-container {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.shop-by .all-shop-container .first-set-container {
+		flex-direction: row;
+	}
 }
 
 @media screen and (min-width: 1024px) {
@@ -1160,68 +1204,72 @@ header nav.showing {
 }
 
 .shop-by .all-shop-container .first-set-container .first-shop {
-	width: 100%;
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding-right: 9.333%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 375px) {
 	.shop-by .all-shop-container .first-set-container .first-shop {
-		padding-right: 21.83%;
+		width: 50%;
 	}
 }
 
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container .first-set-container .first-shop {
-		padding-right: 9.333%;
 		flex-direction: column-reverse;
 	}
 }
 
-.shop-by .all-shop-container .first-set-container .first-shop a .skewed-tag {
+@media screen and (min-width: 375px) {
+	.shop-by .all-shop-container .first-set-container .first-shop img {
+		width: 70%;
+		padding-bottom: 0.876rem;
+	}
+}
+
+.shop-by .all-shop-container .first-set-container .first-shop a {
 	position: relative;
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
-	width: 175px;
-	height: 50px;
 	color: #fff;
 	background-color: #fa4407;
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	.shop-by .all-shop-container .first-set-container .first-shop a .skewed-tag {
-		width: 160px;
+@media screen and (min-width: 375px) {
+	.shop-by .all-shop-container .first-set-container .first-shop a {
+		width: 54.666%;
 	}
 }
 
-.shop-by .all-shop-container .first-set-container .first-shop a .skewed-tag div :before {
+.shop-by .all-shop-container .first-set-container .first-shop a::before {
 	content: '';
 	position: absolute;
 	background-color: #fa4407;
-	width: 10%;
+	width: 50%;
 	height: 100%;
 	bottom: 0;
-	left: -5%;
+	left: -11%;
 	-ms-transform: skew(20deg, 0deg);
 	    transform: skew(20deg, 0deg);
+	z-index: -2;
 }
 
-.shop-by .all-shop-container .first-set-container .first-shop a .skewed-tag div :after {
+.shop-by .all-shop-container .first-set-container .first-shop a::after {
 	content: '';
 	position: absolute;
 	background-color: #fa4407;
-	width: 10%;
+	width: 50%;
 	height: 100%;
 	bottom: 0;
-	right: -5%;
+	right: -11%;
 	-ms-transform: skew(20deg, 0deg);
 	    transform: skew(20deg, 0deg);
+	z-index: -2;
 }
 
 .shop-by .all-shop-container .first-set-container .second-shop {
@@ -1230,63 +1278,67 @@ header nav.showing {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 100%;
-	padding-left: 9.333%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 375px) {
 	.shop-by .all-shop-container .first-set-container .second-shop {
-		padding-left: 21.83%;
+		width: 50%;
 	}
 }
 
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container .first-set-container .second-shop {
-		padding-left: 9.333%;
 		flex-direction: column-reverse;
 	}
 }
 
-.shop-by .all-shop-container .first-set-container .second-shop a .skewed-tag {
+@media screen and (min-width: 375px) {
+	.shop-by .all-shop-container .first-set-container .second-shop img {
+		width: 70%;
+		padding-bottom: 0.876rem;
+	}
+}
+
+.shop-by .all-shop-container .first-set-container .second-shop a {
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	width: 175px;
-	height: 50px;
 	color: #fff;
 	background-color: #4b858c;
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	.shop-by .all-shop-container .first-set-container .second-shop a .skewed-tag {
-		width: 160px;
+@media screen and (min-width: 375px) {
+	.shop-by .all-shop-container .first-set-container .second-shop a {
+		width: 56.8%;
 	}
 }
 
-.shop-by .all-shop-container .first-set-container .second-shop a .skewed-tag div :before {
+.shop-by .all-shop-container .first-set-container .second-shop a::before {
 	content: '';
 	position: absolute;
 	background-color: #4b858c;
-	width: 15%;
+	width: 50%;
 	height: 100%;
 	bottom: 0;
-	left: -6%;
-	-ms-transform: skew(25deg, 0deg);
-	    transform: skew(25deg, 0deg);
+	left: -11%;
+	-ms-transform: skew(20deg, 0deg);
+	    transform: skew(20deg, 0deg);
+	z-index: -2;
 }
 
-.shop-by .all-shop-container .first-set-container .second-shop a .skewed-tag div :after {
+.shop-by .all-shop-container .first-set-container .second-shop a::after {
 	content: '';
 	position: absolute;
 	background-color: #4b858c;
-	width: 15%;
+	width: 50%;
 	height: 100%;
 	bottom: 0;
-	right: -6.5%;
-	-ms-transform: skew(-25deg, 0deg);
-	    transform: skew(-25deg, 0deg);
+	right: -11%;
+	-ms-transform: skew(-20deg, 0deg);
+	    transform: skew(-20deg, 0deg);
+	z-index: -2;
 }
 
 .shop-by .all-shop-container .second-set-container {
@@ -1295,9 +1347,14 @@ header nav.showing {
 	align-items: baseline;
 }
 
+@media screen and (min-width: 375px) {
+	.shop-by .all-shop-container .second-set-container {
+		width: 100%;
+	}
+}
+
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container .second-set-container {
-		padding-left: 4.02%;
 		align-items: end;
 	}
 }
@@ -1308,64 +1365,68 @@ header nav.showing {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 100%;
-	padding-right: 9.333%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 375px) {
 	.shop-by .all-shop-container .second-set-container .third-shop {
-		padding-right: 21.83%;
+		width: 50%;
 	}
 }
 
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container .second-set-container .third-shop {
-		padding-right: 9.333%;
 		flex-direction: column-reverse;
 	}
 }
 
-.shop-by .all-shop-container .second-set-container .third-shop a .skewed-tag {
+@media screen and (min-width: 375px) {
+	.shop-by .all-shop-container .second-set-container .third-shop img {
+		width: 60%;
+		padding-bottom: 0.876rem;
+	}
+}
+
+.shop-by .all-shop-container .second-set-container .third-shop a {
 	position: relative;
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
 	font-size: 1.25rem;
-	width: 175px;
-	height: 50px;
 	color: #000;
 	background-color: #fda50d;
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	.shop-by .all-shop-container .second-set-container .third-shop a .skewed-tag {
-		width: 160px;
+@media screen and (min-width: 375px) {
+	.shop-by .all-shop-container .second-set-container .third-shop a {
+		width: 60%;
 	}
 }
 
-.shop-by .all-shop-container .second-set-container .third-shop a .skewed-tag div :before {
+.shop-by .all-shop-container .second-set-container .third-shop a::before {
 	content: '';
 	position: absolute;
 	background-color: #fda50d;
-	width: 10%;
+	width: 50%;
 	height: 100%;
 	bottom: 0;
-	left: -5%;
+	left: -23%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
+	z-index: -2;
 }
 
-.shop-by .all-shop-container .second-set-container .third-shop a .skewed-tag div :after {
+.shop-by .all-shop-container .second-set-container .third-shop a::after {
 	content: '';
 	position: absolute;
 	background-color: #fda50d;
-	width: 10%;
+	width: 50%;
 	height: 100%;
 	bottom: 0;
-	right: -5%;
+	right: -23%;
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
+	z-index: -2;
 }
 
 .shop-by .all-shop-container .second-set-container .fourth-shop {
@@ -1374,63 +1435,67 @@ header nav.showing {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 100%;
-	padding-left: 9.333%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 375px) {
 	.shop-by .all-shop-container .second-set-container .fourth-shop {
-		padding-left: 21.83%;
+		width: 50%;
 	}
 }
 
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container .second-set-container .fourth-shop {
-		padding-left: 9.333%;
 		flex-direction: column-reverse;
 	}
 }
 
-.shop-by .all-shop-container .second-set-container .fourth-shop a .skewed-tag {
+@media screen and (min-width: 375px) {
+	.shop-by .all-shop-container .second-set-container .fourth-shop img {
+		width: 80%;
+		padding-bottom: 0.876rem;
+	}
+}
+
+.shop-by .all-shop-container .second-set-container .fourth-shop a {
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	width: 175px;
-	height: 50px;
 	color: #000;
 	background-color: #a1bbab;
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	.shop-by .all-shop-container .second-set-container .fourth-shop a .skewed-tag {
-		width: 160px;
+@media screen and (min-width: 375px) {
+	.shop-by .all-shop-container .second-set-container .fourth-shop a {
+		width: 73.333%;
 	}
 }
 
-.shop-by .all-shop-container .second-set-container .fourth-shop a .skewed-tag div :before {
+.shop-by .all-shop-container .second-set-container .fourth-shop a::before {
 	content: '';
 	position: absolute;
 	background-color: #a1bbab;
-	width: 15%;
+	width: 50%;
 	height: 100%;
 	bottom: 0;
-	left: -6%;
+	left: -9%;
 	-ms-transform: skew(-25deg, 0deg);
 	    transform: skew(-25deg, 0deg);
+	z-index: -2;
 }
 
-.shop-by .all-shop-container .second-set-container .fourth-shop a .skewed-tag div :after {
+.shop-by .all-shop-container .second-set-container .fourth-shop a::after {
 	content: '';
 	position: absolute;
 	background-color: #a1bbab;
-	width: 15%;
+	width: 50%;
 	height: 100%;
 	bottom: 0;
-	right: -6.5%;
+	right: -9%;
 	-ms-transform: skew(25deg, 0deg);
 	    transform: skew(25deg, 0deg);
+	z-index: -2;
 }
 
 .featured-header {
@@ -2148,8 +2213,19 @@ footer .contact .contact-head span {
 footer .contact .contact-info {
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 17.529%;
-	padding-top: 15%;
+}
+
+@media screen and (min-width: 375px) {
+	footer .contact .contact-info {
+		width: 100%;
+		padding: 15% 0% 17.529% 5%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	footer .contact .contact-info {
+		padding: 15% 0% 17.529% 0%;
+	}
 }
 
 footer .contact .contact-info .contacts {
@@ -2176,7 +2252,7 @@ footer .contact .contact-info .contacts.address .address-info {
 
 footer .contact .contact-info .contacts span {
 	padding-left: 0.668rem;
-	font-size: 1.375rem;
+	font-size: 1.175rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -2196,9 +2272,12 @@ footer .contact .social-links {
 	padding: 11.47% 0rem;
 }
 
-footer .contact .social-links img {
-	width: 60px;
-	margin-right: 5%;
+@media screen and (min-width: 375px) {
+	footer .contact .social-links img {
+		width: 5rem;
+		height: 5rem;
+		margin: 5%;
+	}
 }
 
 footer form {

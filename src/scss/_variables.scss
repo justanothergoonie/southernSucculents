@@ -1,3 +1,5 @@
+$breakpoint-actual-mobile: 375px;
+
 $breakpoint-mobile: 480px;
 
 $breakpoint-tablet: 768px;
@@ -37,7 +39,12 @@ $breakpoint-large-desktop: 1300px;
 }
 
 @mixin iPhone-x {
-	@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	@media screen and (min-width: $breakpoint-actual-mobile) {
 		@content;
 	}
 }
+// @mixin iPhone-x {
+// 	@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+// 		@content;
+// 	}
+// }
