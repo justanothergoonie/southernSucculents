@@ -10,17 +10,9 @@ let toggleNav = function () {
 hamburgerButton.addEventListener('click', toggleNav);
 
 let codyMenu = document.querySelector('.cody-menu');
-let dropDownButton = document.querySelector('.plant-dropdown');
-let colorMenu = document.querySelector('.color-menu');
+let dropDownButton = document.querySelector('.dropdown');
 
 let toggleList = function () {
 	codyMenu.classList.toggle('open');
 };
-
 dropDownButton.addEventListener('click', toggleList);
-
-let toggleColor = function () {
-	codyMenu.classList.toggle('open-color');
-};
-
-colorMenu.addEventListener('click', toggleColor);
