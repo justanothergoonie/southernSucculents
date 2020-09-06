@@ -391,6 +391,7 @@ header {
 		a:hover {
 			color: #fa4407;
 			background-color: #fff;
+			transition-delay: 0.2s;
 		}
 		a::before {
 			content: '';
@@ -405,6 +406,7 @@ header {
 		}
 		a:hover::before {
 			background-color: #fff;
+			transition-delay: 0.2s;
 		}
 		a::after {
 			content: '';
@@ -420,6 +422,7 @@ header {
 
 		a:hover::after {
 			background-color: #fff;
+			transition-delay: 0.2s;
 		}
 	}
 }
@@ -1452,21 +1455,34 @@ header {
 				justify-content: flex-start;
 			}
 			.mobile-samples {
-				display: flex;
-				width: 100%;
-				flex-grow: 1;
-				overflow: hidden;
-				img:first-child {
-					width: 25%;
+				// display: flex;
+				// width: 100%;
+				// flex-grow: 1;
+				// overflow: hidden;
+				// img:first-child {
+				// 	width: 25%;
+				// }
+				// img:nth-child(2) {
+				// 	width: 50%;
+				// }
+				// img:last-child {
+				// 	width: 25%;
+				// }
+				// @include bp-med {
+				// 	display: none;
+				// }
+				.carousel {
+					width: 90vw;
+					height: auto;
+					margin: 0px auto;
+					margin-bottom: 5%;
+					@include bp-med {
+						display: none;
+					}
 				}
-				img:nth-child(2) {
-					width: 50%;
-				}
-				img:last-child {
-					width: 25%;
-				}
-				@include bp-med {
-					display: none;
+				.slick-slide img {
+					width: 100%;
+					height: auto;
 				}
 			}
 			.not-mobile-samples {
@@ -1633,35 +1649,33 @@ footer {
 			}
 
 			button {
-				@include bp-med {
-					position: relative;
-					margin: 20px 0px;
-					border: none;
-					height: 120px;
-					font-size: 2rem;
-					background-color: #193638;
-					z-index: 100;
-					width: 50%;
-					font-weight: 100;
-					color: white;
-				}
+				position: relative;
+				margin: 20px 0px;
+				border: none;
+				height: 120px;
+				font-size: 2rem;
+				background-color: #193638;
+				z-index: 100;
+				width: 50%;
+				font-weight: 100;
+				color: white;
 			}
 			:hover {
 				color: #193638;
 				background-color: #fff;
 			}
-			::after {
-				@include bp-med {
-					content: '';
-					height: 100%;
-					background-color: #1a3637;
-					position: absolute;
-					width: 70%;
-					top: 0%;
-					right: -31%;
-					z-index: -100;
-					transform: skew(-42deg, 0deg);
-				}
+			button::after {
+				// @include bp-large {
+				content: '';
+				height: 100%;
+				background-color: #1a3637;
+				position: absolute;
+				width: 70%;
+				top: 0%;
+				right: -31%;
+				z-index: -100;
+				transform: skew(-42deg, 0deg);
+				// }
 			}
 			button:hover::after {
 				background-color: #fff;

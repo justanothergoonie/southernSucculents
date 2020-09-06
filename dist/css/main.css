@@ -710,6 +710,7 @@ header nav.showing {
 .wedding-events .header-container a:hover {
 	color: #fa4407;
 	background-color: #fff;
+	transition-delay: 0.2s;
 }
 
 .wedding-events .header-container a::before {
@@ -727,6 +728,7 @@ header nav.showing {
 
 .wedding-events .header-container a:hover::before {
 	background-color: #fff;
+	transition-delay: 0.2s;
 }
 
 .wedding-events .header-container a::after {
@@ -744,6 +746,7 @@ header nav.showing {
 
 .wedding-events .header-container a:hover::after {
 	background-color: #fff;
+	transition-delay: 0.2s;
 }
 
 .dish-gardens {
@@ -2175,29 +2178,22 @@ header nav.showing {
 	}
 }
 
-.full-shop .img-set .samples .mobile-samples {
-	display: flex;
-	width: 100%;
-	flex-grow: 1;
-	overflow: hidden;
-}
-
-.full-shop .img-set .samples .mobile-samples img:first-child {
-	width: 25%;
-}
-
-.full-shop .img-set .samples .mobile-samples img:nth-child(2) {
-	width: 50%;
-}
-
-.full-shop .img-set .samples .mobile-samples img:last-child {
-	width: 25%;
+.full-shop .img-set .samples .mobile-samples .carousel {
+	width: 90vw;
+	height: auto;
+	margin: 0px auto;
+	margin-bottom: 5%;
 }
 
 @media screen and (min-width: 768px) {
-	.full-shop .img-set .samples .mobile-samples {
+	.full-shop .img-set .samples .mobile-samples .carousel {
 		display: none;
 	}
+}
+
+.full-shop .img-set .samples .mobile-samples .slick-slide img {
+	width: 100%;
+	height: auto;
 }
 
 .full-shop .img-set .samples .not-mobile-samples {
@@ -2423,9 +2419,6 @@ footer form {
 		padding-left: 5%;
 		font-size: 1.325rem;
 	}
-}
-
-@media screen and (min-width: 1024px) and (min-width: 768px) {
 	footer form button {
 		position: relative;
 		margin: 20px 0px;
@@ -2438,17 +2431,11 @@ footer form {
 		font-weight: 100;
 		color: white;
 	}
-}
-
-@media screen and (min-width: 1024px) {
 	footer form :hover {
 		color: #193638;
 		background-color: #fff;
 	}
-}
-
-@media screen and (min-width: 1024px) and (min-width: 768px) {
-	footer form ::after {
+	footer form button::after {
 		content: '';
 		height: 100%;
 		background-color: #1a3637;
@@ -2460,9 +2447,6 @@ footer form {
 		-ms-transform: skew(-42deg, 0deg);
 		    transform: skew(-42deg, 0deg);
 	}
-}
-
-@media screen and (min-width: 1024px) {
 	footer form button:hover::after {
 		background-color: #fff;
 	}
