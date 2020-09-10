@@ -223,16 +223,38 @@ header .mobile-only-container .hamburger {
 	border: none;
 }
 
-header .mobile-only-container .hamburger .line {
+header .mobile-only-container .hamburger .lineOne,
+header .mobile-only-container .hamburger .lineTwo,
+header .mobile-only-container .hamburger .lineThree {
 	width: 75%;
 	height: 12%;
 	margin: 10%;
 	background-color: black;
 }
 
-header .logo {
-	width: 200px;
+header .mobile-only-container .hamburger:hover .lineOne {
+	-ms-transform: translateY(10px) rotate(45deg);
+	    transform: translateY(10px) rotate(45deg);
+	transition: all 0.5s ease;
+}
+
+header .mobile-only-container .hamburger:hover .lineTwo {
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+header .mobile-only-container .hamburger:hover .lineThree {
+	-ms-transform: translateY(-21px) rotate(-45deg);
+	    transform: translateY(-21px) rotate(-45deg);
+	transition: all 0.5s ease;
+}
+
+header a {
 	align-self: center;
+}
+
+header a .logo {
+	width: 200px;
 	position: relative;
 	top: 1.5rem;
 	z-index: 2;
@@ -248,7 +270,7 @@ header nav {
 	top: 5rem;
 	max-width: 0px;
 	overflow: hidden;
-	transition: 1s ease-in-out;
+	transition: 0.5s ease-in-out;
 	z-index: 1000;
 }
 
@@ -260,7 +282,7 @@ header nav ul {
 
 @media screen and (min-width: 375px) {
 	header nav ul li {
-		padding: 1rem 0.5rem;
+		padding: 1rem 0.5rem 1rem 0rem;
 	}
 }
 
@@ -542,7 +564,6 @@ header nav.showing {
 }
 
 .wedding-events {
-	position: relative;
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -554,6 +575,7 @@ header nav.showing {
 	.wedding-events {
 		flex-direction: row;
 		justify-content: flex-end;
+		position: relative;
 	}
 }
 
@@ -571,24 +593,36 @@ header nav.showing {
 }
 
 .wedding-events .header-container {
-	position: relative;
 	z-index: 10;
 }
 
 @media screen and (min-width: 1024px) {
 	.wedding-events .header-container {
 		width: 37.11%;
+		position: relative;
 	}
 }
 
 .wedding-events .header-container .skewed-header {
 	position: relative;
-	margin: 50px 0px 220px 0px;
+	margin: 20% 0%;
+}
+
+@media screen and (min-width: 768px) {
+	.wedding-events .header-container .skewed-header {
+		display: flex;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
 }
 
 @media screen and (min-width: 1024px) {
 	.wedding-events .header-container .skewed-header {
 		background-color: #f7f3f3;
+		align-items: baseline;
+		margin: 0%;
 	}
 	.wedding-events .header-container .skewed-header :before {
 		content: '';
@@ -604,44 +638,30 @@ header nav.showing {
 	}
 }
 
-.wedding-events .header-container .skewed-header div {
-	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-
-@media screen and (min-width: 1024px) {
-	.wedding-events .header-container .skewed-header div {
-		align-items: baseline;
-	}
-}
-
-.wedding-events .header-container .skewed-header div h2 {
+.wedding-events .header-container .skewed-header h2 {
 	font-weight: 100;
 	font-size: 2.8rem;
 }
 
 @media screen and (min-width: 375px) {
-	.wedding-events .header-container .skewed-header div h2 {
+	.wedding-events .header-container .skewed-header h2 {
 		font-size: 2rem;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.wedding-events .header-container .skewed-header div h2 {
+	.wedding-events .header-container .skewed-header h2 {
 		font-size: 4.28rem;
 		padding-left: 1%;
 	}
 }
 
-.wedding-events .header-container .skewed-header div span {
+.wedding-events .header-container .skewed-header span {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
-	.wedding-events .header-container .skewed-header div span {
+	.wedding-events .header-container .skewed-header span {
 		display: block;
 		padding: 1.42rem 0;
 		font-weight: 100;
@@ -655,20 +675,18 @@ header nav.showing {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	position: absolute;
-	bottom: 30%;
-	right: 25%;
+	position: relative;
 	color: #fff;
 	font-size: 1.91rem;
 	font-weight: 100;
 	background-color: #fa4407;
 	z-index: 10;
+	width: 10rem;
+	margin: 25% auto;
 }
 
 @media screen and (min-width: 768px) {
 	.wedding-events .header-container a {
-		bottom: 25%;
-		right: 35%;
 		text-align: center;
 		font-size: 1.3rem;
 		width: 10.74rem;
@@ -681,12 +699,7 @@ header nav.showing {
 		right: 28.5%;
 		width: 15.74rem;
 		font-size: 2.25rem;
-	}
-}
-
-@media screen and (min-width: 1300px) {
-	.wedding-events .header-container a {
-		right: 64.5%;
+		margin: -1% 0% 15% 25%;
 	}
 }
 
@@ -755,13 +768,13 @@ header nav.showing {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	position: relative;
 }
 
 @media screen and (min-width: 1024px) {
 	.dish-gardens {
 		justify-content: flex-start;
 		flex-direction: row-reverse;
+		position: relative;
 	}
 }
 
@@ -778,31 +791,20 @@ header nav.showing {
 @media screen and (min-width: 1024px) {
 	.dish-gardens img {
 		width: 56.14%;
+		z-index: -6;
 	}
-}
-
-.dish-gardens .header-container {
-	position: relative;
 }
 
 @media screen and (min-width: 1024px) {
 	.dish-gardens .header-container {
 		width: 43.92%;
+		position: relative;
 	}
 }
 
 .dish-gardens .header-container .skewed-header {
-	margin: 50px 0px 220px 0px;
+	margin: 20% 0%;
 	position: relative;
-}
-
-@media screen and (min-width: 1024px) {
-	.dish-gardens .header-container .skewed-header {
-		background-color: #f7f3f3;
-	}
-}
-
-.dish-gardens .header-container .skewed-header div {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -811,63 +813,64 @@ header nav.showing {
 }
 
 @media screen and (min-width: 1024px) {
-	.dish-gardens .header-container .skewed-header div {
+	.dish-gardens .header-container .skewed-header {
+		background-color: #f7f3f3;
 		align-items: flex-start;
+		margin: 0%;
+	}
+	.dish-gardens .header-container .skewed-header :before {
+		content: '';
+		position: absolute;
+		background-color: #f7f3f3;
+		width: 50%;
+		height: 100%;
+		top: 0;
+		z-index: -4;
+		right: -8%;
+		-ms-transform: skew(20deg, 0deg);
+		    transform: skew(20deg, 0deg);
 	}
 }
 
-.dish-gardens .header-container .skewed-header div h2 {
+.dish-gardens .header-container .skewed-header h2 {
 	font-weight: 100;
 	font-size: 4rem;
 	z-index: 10;
 }
 
 @media screen and (min-width: 768px) {
-	.dish-gardens .header-container .skewed-header div h2 {
+	.dish-gardens .header-container .skewed-header h2 {
 		text-align: center;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.dish-gardens .header-container .skewed-header div h2 {
+	.dish-gardens .header-container .skewed-header h2 {
 		text-align: left;
 		padding-left: 4.39%;
 	}
 }
 
-.dish-gardens .header-container .skewed-header div h2 span {
+.dish-gardens .header-container .skewed-header h2 span {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
-	.dish-gardens .header-container .skewed-header div h2 span {
+	.dish-gardens .header-container .skewed-header h2 span {
 		display: block;
 		padding: 30px 0px;
 		font-size: 1.125rem;
 	}
 }
 
-.dish-gardens .header-container .skewed-header div h2 :before {
-	content: '';
-	position: absolute;
-	background-color: #f7f3f3;
-	width: 50%;
-	height: 100%;
-	top: 0;
-	z-index: -4;
-	right: -8%;
-	-ms-transform: skew(20deg, 0deg);
-	    transform: skew(20deg, 0deg);
-}
-
 @media screen and (min-width: 375px) {
-	.dish-gardens .header-container .skewed-header div h2 {
+	.dish-gardens .header-container .skewed-header h2 {
 		font-size: 2rem;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.dish-gardens .header-container .skewed-header div h2 {
+	.dish-gardens .header-container .skewed-header h2 {
 		font-size: 4.28rem;
 		padding-left: 4.39%;
 	}
@@ -878,21 +881,19 @@ header nav.showing {
 	align-content: center;
 	align-items: center;
 	justify-content: center;
-	color: #fff;
-	background-color: #fda50d;
-	position: absolute;
 	flex-direction: column;
-	bottom: 30%;
-	right: 18%;
+	position: relative;
+	color: #fff;
 	font-size: 1.91rem;
 	font-weight: 100;
+	background-color: #fda50d;
 	z-index: 10;
+	width: 10rem;
+	margin: 25% auto;
 }
 
 @media screen and (min-width: 768px) {
 	.dish-gardens .header-container a {
-		bottom: 25%;
-		right: 35%;
 		text-align: center;
 		font-size: 1.3rem;
 		width: 10.74rem;
@@ -901,17 +902,9 @@ header nav.showing {
 
 @media screen and (min-width: 1024px) {
 	.dish-gardens .header-container a {
-		bottom: 20%;
-		left: 45.5%;
 		width: 15.74rem;
 		font-size: 2.25rem;
-	}
-}
-
-@media screen and (min-width: 1300px) {
-	.dish-gardens .header-container a {
-		bottom: 24%;
-		left: 69.5%;
+		margin: 0% 0% 15% 30%;
 	}
 }
 
@@ -991,13 +984,13 @@ header nav.showing {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	position: relative;
 }
 
 @media screen and (min-width: 1024px) {
 	.vertical-gardens {
 		flex-direction: row;
 		justify-content: flex-end;
+		position: relative;
 	}
 }
 
@@ -1012,28 +1005,16 @@ header nav.showing {
 	}
 }
 
-.vertical-gardens .header-container {
-	position: relative;
-}
-
 @media screen and (min-width: 1024px) {
 	.vertical-gardens .header-container {
 		width: 37.8%;
+		position: relative;
 	}
 }
 
 .vertical-gardens .header-container .skewed-header {
-	margin: 50px 0px 220px 0px;
+	margin: 20% 0%;
 	position: relative;
-}
-
-@media screen and (min-width: 1024px) {
-	.vertical-gardens .header-container .skewed-header {
-		background-color: #f7f3f3;
-	}
-}
-
-.vertical-gardens .header-container .skewed-header div {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -1042,34 +1023,36 @@ header nav.showing {
 }
 
 @media screen and (min-width: 1024px) {
-	.vertical-gardens .header-container .skewed-header div {
+	.vertical-gardens .header-container .skewed-header {
+		background-color: #f7f3f3;
 		align-items: initial;
+		margin: 0%;
 	}
 }
 
-.vertical-gardens .header-container .skewed-header div h2 {
+.vertical-gardens .header-container .skewed-header h2 {
 	font-weight: 100;
 	font-size: 3rem;
 }
 
 @media screen and (min-width: 768px) {
-	.vertical-gardens .header-container .skewed-header div h2 {
+	.vertical-gardens .header-container .skewed-header h2 {
 		text-align: center;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.vertical-gardens .header-container .skewed-header div h2 {
+	.vertical-gardens .header-container .skewed-header h2 {
 		text-align: left;
 	}
 }
 
-.vertical-gardens .header-container .skewed-header div h2 span {
+.vertical-gardens .header-container .skewed-header h2 span {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
-	.vertical-gardens .header-container .skewed-header div h2 span {
+	.vertical-gardens .header-container .skewed-header h2 span {
 		display: block;
 		padding: 1.42rem 0;
 		font-size: 1.125rem;
@@ -1077,12 +1060,12 @@ header nav.showing {
 }
 
 @media screen and (min-width: 1024px) {
-	.vertical-gardens .header-container .skewed-header div h2 span {
+	.vertical-gardens .header-container .skewed-header h2 span {
 		z-index: 9;
 	}
 }
 
-.vertical-gardens .header-container .skewed-header div h2 :before {
+.vertical-gardens .header-container .skewed-header h2 :before {
 	content: '';
 	position: absolute;
 	background-color: #f7f3f3;
@@ -1096,13 +1079,13 @@ header nav.showing {
 }
 
 @media screen and (min-width: 375px) {
-	.vertical-gardens .header-container .skewed-header div h2 {
+	.vertical-gardens .header-container .skewed-header h2 {
 		font-size: 2rem;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.vertical-gardens .header-container .skewed-header div h2 {
+	.vertical-gardens .header-container .skewed-header h2 {
 		font-size: 4.75rem;
 		z-index: 10;
 	}
@@ -1114,20 +1097,18 @@ header nav.showing {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	position: absolute;
-	bottom: 30%;
+	position: relative;
+	color: #fff;
 	font-size: 1.91rem;
 	font-weight: 100;
-	right: 25%;
 	background-color: #6e352d;
-	color: #fff;
 	z-index: 10;
+	width: 10rem;
+	margin: 25% auto;
 }
 
 @media screen and (min-width: 768px) {
 	.vertical-gardens .header-container a {
-		bottom: 25%;
-		right: 35%;
 		text-align: center;
 		font-size: 1.3rem;
 		width: 10.74rem;
@@ -1136,17 +1117,9 @@ header nav.showing {
 
 @media screen and (min-width: 1024px) {
 	.vertical-gardens .header-container a {
-		bottom: 20%;
-		right: 27.5%;
 		font-size: 2.25rem;
 		width: 15.74rem;
-	}
-}
-
-@media screen and (min-width: 1300px) {
-	.vertical-gardens .header-container a {
-		bottom: 21%;
-		right: 62.5%;
+		margin: 0;
 	}
 }
 
@@ -1659,9 +1632,9 @@ header nav.showing {
 }
 
 .featured .cody-menu ul {
-	transition: opacity 1s ease-out;
-	opacity: 0;
-	height: 0;
+	max-height: 0;
+	transition: opacity 1s ease-out, max-height 0.3s;
+	overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -1702,9 +1675,8 @@ header nav.showing {
 }
 
 .featured .cody-menu.open ul {
-	transition: opacity 1s ease-out;
 	opacity: 1;
-	height: auto;
+	max-height: 500px;
 }
 
 .featured .products {
@@ -1733,6 +1705,11 @@ header nav.showing {
 
 .featured .products .product img {
 	margin: 1.44rem 0;
+}
+
+.featured .products .product img:hover {
+	-ms-transform: scale(1.1);
+	    transform: scale(1.1);
 }
 
 .featured .products .product h3 {
@@ -2050,15 +2027,16 @@ header nav.showing {
 
 .full-shop .info-set .shop-form .cody-menu .dropdown span {
 	padding: 0.882rem;
+	transition: 0.5s linear;
 }
 
 .full-shop .info-set .shop-form .cody-menu .color-ul {
 	margin-bottom: 1.153rem;
 	padding: 0;
 	display: flex;
-	transition: 1s ease-out;
-	opacity: 0;
-	height: 0;
+	transition: opacity 1s ease-out, max-height 0.3s;
+	overflow: hidden;
+	max-height: 0;
 }
 
 .full-shop .info-set .shop-form .cody-menu .color-ul li {
@@ -2075,9 +2053,8 @@ header nav.showing {
 	margin-bottom: 1.153rem;
 	padding: 0;
 	display: flex;
-	transition: 1s ease-out;
 	opacity: 1;
-	height: auto;
+	max-height: 100px;
 }
 
 .full-shop .info-set .shop-form .cody-menu.open .color-ul li {
@@ -2245,13 +2222,18 @@ header nav.showing {
 	}
 }
 
+.full-shop .img-set .samples .not-mobile-samples div:last-child {
+	margin-left: -2.5%;
+	width: 100%;
+}
+
 .full-shop .img-set .samples .not-mobile-samples div:last-child img {
 	margin-right: 3.19rem;
 }
 
 @media screen and (min-width: 1024px) {
 	.full-shop .img-set .samples .not-mobile-samples div:last-child img {
-		margin-right: 7.19rem;
+		margin-right: 0.5rem;
 	}
 }
 
@@ -2333,7 +2315,7 @@ footer .contact .contact-info {
 
 @media screen and (min-width: 768px) {
 	footer .contact .contact-info {
-		padding: 15% 0% 17.529% 0%;
+		padding: 0% 17.529% 0% 0%;
 	}
 }
 
@@ -2370,22 +2352,22 @@ footer .contact .contact-info .contacts span {
 	}
 }
 
-@media screen and (min-width: 768px) {
-	footer .contact .contact-info {
-		padding-bottom: 0%;
-	}
-}
-
 footer .contact .social-links {
 	display: flex;
+	justify-content: space-between;
 	padding: 11.47% 0rem;
 }
 
 @media screen and (min-width: 375px) {
 	footer .contact .social-links img {
-		width: 5rem;
-		height: 5rem;
-		margin-right: 5%;
+		width: 3rem;
+		height: 3rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	footer .contact .social-links {
+		width: 20rem;
 	}
 }
 
@@ -2496,6 +2478,16 @@ footer form {
 		visibility: hidden;
 		opacity: 0;
 	}
+}
+
+.slick-prev:before {
+	color: #fa4407 !important;
+	background-color: #eee;
+}
+
+.slick-next:before {
+	color: #fa4407 !important;
+	background-color: #eee;
 }
 
 /*# sourceMappingURL=main.css.map */

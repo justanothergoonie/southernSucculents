@@ -1,13 +1,6 @@
 "use strict";
 
 console.log("Hello World from main.js! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files.");
-$(document).ready(function () {
-  $('.carousel').slick({
-    slidesToShow: 3,
-    dots: true,
-    centerMode: true
-  });
-});
 var hamburgerButton = document.querySelector('.hamburger');
 var navList = document.querySelector('nav');
 
@@ -24,4 +17,11 @@ var toggleList = function toggleList() {
 };
 
 dropDownButton.addEventListener('click', toggleList);
+$(document).ready(function () {
+  $('.carousel').slick({
+    slidesToShow: 3,
+    dots: true,
+    centerMode: true
+  });
+});
 //# sourceMappingURL=main.js.map

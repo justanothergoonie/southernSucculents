@@ -13,6 +13,7 @@ header {
 		@include bp-large {
 			display: none;
 		}
+
 		img {
 			height: 50px;
 			width: 50px;
@@ -29,7 +30,9 @@ header {
 			color: #f7f3f2;
 			border: none;
 
-			.line {
+			.lineOne,
+			.lineTwo,
+			.lineThree {
 				width: 75%;
 				height: 12%;
 
@@ -37,14 +40,31 @@ header {
 				background-color: black;
 			}
 		}
+		.hamburger:hover .lineOne {
+			transform: translateY(10px) rotate(45deg);
+			transition: all 0.5s ease;
+		}
+
+		.hamburger:hover .lineTwo {
+			opacity: 0;
+			transition: all 0.2s ease;
+		}
+
+		.hamburger:hover .lineThree {
+			transform: translateY(-21px) rotate(-45deg);
+			transition: all 0.5s ease;
+		}
 	}
-	.logo {
-		width: 200px;
+	a {
 		align-self: center;
-		position: relative;
-		top: 1.5rem;
-		z-index: 2;
+		.logo {
+			width: 200px;
+			position: relative;
+			top: 1.5rem;
+			z-index: 2;
+		}
 	}
+
 	nav {
 		// background: rgba(0, 0, 0, 0.6);
 		font-size: 1.5rem;
@@ -56,7 +76,7 @@ header {
 		top: 5rem;
 		max-width: 0px;
 		overflow: hidden;
-		transition: 1s ease-in-out;
+		transition: 0.5s ease-in-out;
 		z-index: 1000;
 		ul {
 			display: flex;
@@ -64,7 +84,7 @@ header {
 			text-align: right;
 			li {
 				@include iPhone-x {
-					padding: 1rem 0.5rem;
+					padding: 1rem 0.5rem 1rem 0rem;
 				}
 				@include bp-large {
 					padding: 0rem 0rem;
@@ -80,12 +100,6 @@ header {
 
 					flex-direction: column;
 					line-height: 3rem;
-					// padding: 10px 0px;
-					// margin: 2rem 0rem;
-					// text-shadow: 2px 2px 0 #ffffff, 2px -2px 0 #ffffff,
-					// 	-2px 2px 0 #ffffff, -2px -2px 0 #ffffff,
-					// 	2px 0px 0 #ffffff, 0px 2px 0 #ffffff, -2px 0px 0 #ffffff,
-					// 	0px -2px 0 #ffffff, 2px 2px 0px rgba(0, 0, 0, 0);
 					.cart {
 						display: none;
 					}
@@ -282,13 +296,14 @@ header {
 	}
 }
 .wedding-events {
-	position: relative;
+	// position: relative;
 	@include flex-center;
 	flex-direction: column;
 
 	@include bp-large {
 		flex-direction: row;
 		justify-content: flex-end;
+		position: relative;
 	}
 	img {
 		width: 100%;
@@ -300,16 +315,23 @@ header {
 		}
 	}
 	.header-container {
-		position: relative;
 		z-index: 10;
 		@include bp-large {
 			width: 37.11%;
+			position: relative;
 		}
 		.skewed-header {
 			position: relative;
-			margin: 50px 0px 220px 0px;
+			// margin: 50px 0px 220px 0px;
+			margin: 20% 0%;
+			@include bp-med {
+				@include flex-center;
+				flex-direction: column;
+			}
 			@include bp-large {
 				background-color: #f7f3f3;
+				align-items: baseline;
+				margin: 0%;
 				:before {
 					content: '';
 					position: absolute;
@@ -322,48 +344,39 @@ header {
 					transform: skew(-20deg, 0deg);
 				}
 			}
-			div {
-				@include flex-center;
-				flex-direction: column;
+			h2 {
+				font-weight: 100;
+				font-size: 2.8rem;
+				@include iPhone-x {
+					font-size: 2rem;
+				}
 				@include bp-large {
-					align-items: baseline;
+					font-size: 4.28rem;
+					padding-left: 1%;
 				}
-				h2 {
+			}
+			span {
+				display: none;
+				@include bp-med {
+					display: block;
+					padding: 1.42rem 0;
 					font-weight: 100;
-					font-size: 2.8rem;
-					@include iPhone-x {
-						font-size: 2rem;
-					}
-					@include bp-large {
-						font-size: 4.28rem;
-						padding-left: 1%;
-					}
-				}
-				span {
-					display: none;
-					@include bp-med {
-						display: block;
-						padding: 1.42rem 0;
-						font-weight: 100;
-						font-size: 1.125rem;
-					}
+					font-size: 1.125rem;
 				}
 			}
 		}
 		a {
 			@include flex-center;
 			flex-direction: column;
-			position: absolute;
-			bottom: 30%;
-			right: 25%;
+			position: relative;
 			color: #fff;
 			font-size: 1.91rem;
 			font-weight: 100;
 			background-color: #fa4407;
 			z-index: 10;
+			width: 10rem;
+			margin: 25% auto;
 			@include bp-med {
-				bottom: 25%;
-				right: 35%;
 				text-align: center;
 				font-size: 1.3rem;
 				width: 10.74rem;
@@ -373,10 +386,9 @@ header {
 				right: 28.5%;
 				width: 15.74rem;
 				font-size: 2.25rem;
+				margin: -1% 0% 15% 25%;
 			}
-			@include bp-ld {
-				right: 64.5%;
-			}
+
 			.bp-med-only {
 				display: none;
 				@include bp-med {
@@ -429,10 +441,11 @@ header {
 .dish-gardens {
 	@include flex-center;
 	flex-direction: column;
-	position: relative;
+
 	@include bp-large {
 		justify-content: flex-start;
 		flex-direction: row-reverse;
+		position: relative;
 	}
 	@include bp-ld {
 		margin-top: -5%;
@@ -441,95 +454,85 @@ header {
 		width: 100%;
 		@include bp-large {
 			width: 56.14%;
+			z-index: -6;
 		}
 	}
 	.header-container {
-		position: relative;
 		@include bp-large {
 			width: 43.92%;
+			position: relative;
 		}
 		.skewed-header {
-			margin: 50px 0px 220px 0px;
+			// margin: 50px 0px 220px 0px;
+			margin: 20% 0%;
 			position: relative;
+			@include flex-center;
+			flex-direction: column;
 			@include bp-large {
 				background-color: #f7f3f3;
-			}
-			div {
-				@include flex-center;
-				flex-direction: column;
-				@include bp-large {
-					align-items: flex-start;
+				align-items: flex-start;
+				margin: 0%;
+				:before {
+					content: '';
+					position: absolute;
+					background-color: #f7f3f3;
+					width: 50%;
+					height: 100%;
+					top: 0;
+					z-index: -4;
+					right: -8%;
+					transform: skew(20deg, 0deg);
 				}
-				h2 {
-					font-weight: 100;
-					font-size: 4rem;
-					z-index: 10;
+			}
+			h2 {
+				font-weight: 100;
+				font-size: 4rem;
+				z-index: 10;
+				@include bp-med {
+					text-align: center;
+				}
+				@include bp-large {
+					text-align: left;
+					padding-left: 4.39%;
+				}
+				span {
+					display: none;
 					@include bp-med {
-						text-align: center;
+						display: block;
+						padding: 30px 0px;
+						font-size: 1.125rem;
 					}
-					@include bp-large {
-						text-align: left;
-						padding-left: 4.39%;
-					}
-					span {
-						display: none;
-						@include bp-med {
-							display: block;
-							padding: 30px 0px;
-							font-size: 1.125rem;
-						}
-						@include bp-large {
-						}
-					}
-					:before {
-						content: '';
-						position: absolute;
-						background-color: #f7f3f3;
-						width: 50%;
-						height: 100%;
-						top: 0;
-						z-index: -4;
-						right: -8%;
-						transform: skew(20deg, 0deg);
-					}
-					@include iPhone-x {
-						font-size: 2rem;
-					}
-					@include bp-large {
-						font-size: 4.28rem;
-						padding-left: 4.39%;
-					}
+				}
+
+				@include iPhone-x {
+					font-size: 2rem;
+				}
+				@include bp-large {
+					font-size: 4.28rem;
+					padding-left: 4.39%;
 				}
 			}
 		}
 		a {
 			@include flex-center;
-
-			color: #fff;
-			background-color: #fda50d;
-			position: absolute;
 			flex-direction: column;
-			bottom: 30%;
-			right: 18%;
+			position: relative;
+			color: #fff;
 			font-size: 1.91rem;
 			font-weight: 100;
+			background-color: #fda50d;
 			z-index: 10;
+			width: 10rem;
+			margin: 25% auto;
 			@include bp-med {
-				bottom: 25%;
-				right: 35%;
 				text-align: center;
 				font-size: 1.3rem;
 				width: 10.74rem;
 			}
 			@include bp-large {
-				bottom: 20%;
-				left: 45.5%;
 				width: 15.74rem;
 				font-size: 2.25rem;
-			}
-			@include bp-ld {
-				bottom: 24%;
-				left: 69.5%;
+				margin: 0% 0% 15% 30%;
 			}
 
 			.bp-med-only {
@@ -587,10 +590,11 @@ header {
 .vertical-gardens {
 	@include flex-center;
 	flex-direction: column;
-	position: relative;
+
 	@include bp-large {
 		flex-direction: row;
 		justify-content: flex-end;
+		position: relative;
 		// margin-top: 5%;
 	}
 	img {
@@ -601,91 +605,82 @@ header {
 		}
 	}
 	.header-container {
-		position: relative;
 		@include bp-large {
 			width: 37.8%;
+			position: relative;
 		}
 		.skewed-header {
-			margin: 50px 0px 220px 0px;
+			margin: 20% 0%;
 			position: relative;
+			@include flex-center;
+			flex-direction: column;
 			@include bp-large {
 				background-color: #f7f3f3;
+				align-items: initial;
+				margin: 0%;
 			}
-			div {
-				@include flex-center;
-				flex-direction: column;
-				@include bp-large {
-					align-items: initial;
+			h2 {
+				font-weight: 100;
+				font-size: 3rem;
+				@include bp-med {
+					text-align: center;
 				}
-				h2 {
-					font-weight: 100;
-					font-size: 3rem;
+				@include bp-large {
+					text-align: left;
+				}
+				span {
+					display: none;
 					@include bp-med {
-						text-align: center;
+						display: block;
+						padding: 1.42rem 0;
+						font-size: 1.125rem;
 					}
 					@include bp-large {
-						text-align: left;
+						z-index: 9;
 					}
-					span {
-						display: none;
-						@include bp-med {
-							display: block;
-							padding: 1.42rem 0;
-							font-size: 1.125rem;
-						}
-						@include bp-large {
-							z-index: 9;
-						}
-					}
-					:before {
-						content: '';
-						position: absolute;
-						background-color: #f7f3f3;
-						width: 50%;
-						height: 100%;
-						top: 0;
-						z-index: -10;
-						left: -8%;
-						transform: skew(-20deg, 0deg);
-					}
-					@include iPhone-x {
-						font-size: 2rem;
-					}
-					@include bp-large {
-						font-size: 4.75rem;
-						z-index: 10;
-					}
+				}
+				:before {
+					content: '';
+					position: absolute;
+					background-color: #f7f3f3;
+					width: 50%;
+					height: 100%;
+					top: 0;
+					z-index: -10;
+					left: -8%;
+					transform: skew(-20deg, 0deg);
+				}
+				@include iPhone-x {
+					font-size: 2rem;
+				}
+				@include bp-large {
+					font-size: 4.75rem;
+					z-index: 10;
 				}
 			}
 		}
 		a {
 			@include flex-center;
 			flex-direction: column;
-			position: absolute;
-			bottom: 30%;
+			position: relative;
+			color: #fff;
 			font-size: 1.91rem;
 			font-weight: 100;
-			right: 25%;
 			background-color: #6e352d;
-			color: #fff;
 			z-index: 10;
+			width: 10rem;
+			margin: 25% auto;
 			@include bp-med {
-				bottom: 25%;
-				right: 35%;
 				text-align: center;
 				font-size: 1.3rem;
 				width: 10.74rem;
 			}
 			@include bp-large {
-				bottom: 20%;
-				right: 27.5%;
 				font-size: 2.25rem;
 				width: 15.74rem;
+				margin: 0;
 			}
-			@include bp-ld {
-				bottom: 21%;
-				right: 62.5%;
-			}
+
 			.bp-med-only {
 				display: none;
 				@include bp-med {
@@ -1060,10 +1055,9 @@ header {
 			}
 		}
 		ul {
-			transition: opacity 1s ease-out;
-			opacity: 0;
-			height: 0;
-			// overflow: hidden;
+			max-height: 0;
+			transition: opacity 1s ease-out, max-height 0.3s;
+			overflow: hidden;
 
 			@include bp-med {
 				display: flex;
@@ -1098,9 +1092,8 @@ header {
 				}
 			}
 			ul {
-				transition: opacity 1s ease-out;
 				opacity: 1;
-				height: auto;
+				max-height: 500px;
 				// overflow: hidden;
 			}
 		}
@@ -1121,6 +1114,9 @@ header {
 			margin: 2.28rem;
 			img {
 				margin: 1.44rem 0;
+			}
+			img:hover {
+				transform: scale(1.1);
 			}
 			h3 {
 				font-family: 'Roboto', sans-serif;
@@ -1346,15 +1342,16 @@ header {
 					}
 					span {
 						padding: 0.882rem;
+						transition: 0.5s linear;
 					}
 				}
 				.color-ul {
 					margin-bottom: 1.153rem;
 					padding: 0;
 					display: flex;
-					transition: 1s ease-out;
-					opacity: 0;
-					height: 0;
+					transition: opacity 1s ease-out, max-height 0.3s;
+					overflow: hidden;
+					max-height: 0;
 					li {
 						padding-right: 4.533%;
 					}
@@ -1370,9 +1367,9 @@ header {
 						margin-bottom: 1.153rem;
 						padding: 0;
 						display: flex;
-						transition: 1s ease-out;
+
 						opacity: 1;
-						height: auto;
+						max-height: 100px;
 						li {
 							padding-right: 4.533%;
 						}
@@ -1455,22 +1452,6 @@ header {
 				justify-content: flex-start;
 			}
 			.mobile-samples {
-				// display: flex;
-				// width: 100%;
-				// flex-grow: 1;
-				// overflow: hidden;
-				// img:first-child {
-				// 	width: 25%;
-				// }
-				// img:nth-child(2) {
-				// 	width: 50%;
-				// }
-				// img:last-child {
-				// 	width: 25%;
-				// }
-				// @include bp-med {
-				// 	display: none;
-				// }
 				.carousel {
 					width: 90vw;
 					height: auto;
@@ -1516,10 +1497,12 @@ header {
 					}
 				}
 				div:last-child {
+					margin-left: -2.5%;
+					width: 100%;
 					img {
 						margin-right: 3.19rem;
 						@include bp-large {
-							margin-right: 7.19rem;
+							margin-right: 0.5rem;
 						}
 						@include bp-ld {
 							margin-right: 1.19rem;
@@ -1577,7 +1560,7 @@ footer {
 				padding: 15% 0% 17.529% 5%;
 			}
 			@include bp-med {
-				padding: 15% 0% 17.529% 0%;
+				padding: 0% 17.529% 0% 0%;
 			}
 
 			.contacts {
@@ -1607,20 +1590,19 @@ footer {
 					width: 100%;
 				}
 			}
-			@include bp-med {
-				padding-bottom: 0%;
-			}
 		}
 		.social-links {
 			display: flex;
-
+			justify-content: space-between;
 			padding: 11.47% 0rem;
 			img {
 				@include iPhone-x {
-					width: 5rem;
-					height: 5rem;
-					margin-right: 5%;
+					width: 3rem;
+					height: 3rem;
 				}
+			}
+			@include bp-large {
+				width: 20rem;
 			}
 		}
 	}
@@ -1705,3 +1687,20 @@ footer {
 		opacity: 0;
 	}
 }
+
+.slick-prev:before {
+	color: #fa4407 !important;
+	background-color: #eee;
+}
+.slick-next:before {
+	color: #fa4407 !important;
+	background-color: #eee;
+}
+// .slick-dots {
+// 	height: 15px;
+// 	width: 15px;
+// 	// background: rgb(203, 6, 6);
+// 	border-radius: 50px;
+// 	display: inline-block;
+// 	box-shadow: 0px 0px 4px gray inset;
+// }
