@@ -316,6 +316,11 @@ header nav ul li .active {
 	width: 100%;
 }
 
+header nav ul li a:hover {
+	border-bottom: solid #ca3203 2px;
+	width: 100%;
+}
+
 header nav.showing {
 	max-width: 100%;
 }
@@ -1331,6 +1336,21 @@ header nav.showing {
 	z-index: -2;
 }
 
+.shop-by .all-shop-container .first-set-container .first-shop a:hover {
+	color: #fa4407;
+	background-color: #fff;
+}
+
+.shop-by .all-shop-container .first-set-container .first-shop a:hover::before {
+	color: #fa4407;
+	background-color: #fff;
+}
+
+.shop-by .all-shop-container .first-set-container .first-shop a:hover::after {
+	color: #fa4407;
+	background-color: #fff;
+}
+
 .shop-by .all-shop-container .first-set-container .second-shop {
 	display: flex;
 	align-content: center;
@@ -1398,6 +1418,21 @@ header nav.showing {
 	-ms-transform: skew(-20deg, 0deg);
 	    transform: skew(-20deg, 0deg);
 	z-index: -2;
+}
+
+.shop-by .all-shop-container .first-set-container .second-shop a:hover {
+	color: #4b858c;
+	background-color: #fff;
+}
+
+.shop-by .all-shop-container .first-set-container .second-shop a:hover::before {
+	color: #4b858c;
+	background-color: #fff;
+}
+
+.shop-by .all-shop-container .first-set-container .second-shop a:hover::after {
+	color: #4b858c;
+	background-color: #fff;
 }
 
 .shop-by .all-shop-container .second-set-container {
@@ -1488,6 +1523,21 @@ header nav.showing {
 	z-index: -2;
 }
 
+.shop-by .all-shop-container .second-set-container .third-shop a:hover {
+	color: #fda50d;
+	background-color: #fff;
+}
+
+.shop-by .all-shop-container .second-set-container .third-shop a:hover::before {
+	color: #fda50d;
+	background-color: #fff;
+}
+
+.shop-by .all-shop-container .second-set-container .third-shop a:hover::after {
+	color: #fda50d;
+	background-color: #fff;
+}
+
 .shop-by .all-shop-container .second-set-container .fourth-shop {
 	display: flex;
 	align-content: center;
@@ -1555,6 +1605,21 @@ header nav.showing {
 	-ms-transform: skew(25deg, 0deg);
 	    transform: skew(25deg, 0deg);
 	z-index: -2;
+}
+
+.shop-by .all-shop-container .second-set-container .fourth-shop a:hover {
+	color: #a1bbab;
+	background-color: #fff;
+}
+
+.shop-by .all-shop-container .second-set-container .fourth-shop a:hover::before {
+	color: #a1bbab;
+	background-color: #fff;
+}
+
+.shop-by .all-shop-container .second-set-container .fourth-shop a:hover::after {
+	color: #a1bbab;
+	background-color: #fff;
 }
 
 .featured-header {
@@ -1627,7 +1692,7 @@ header nav.showing {
 .featured .cody-menu .dropdown span {
 	align-self: right;
 	margin: auto 0;
-	transition: 0.5s linear;
+	transition: 0.3s linear;
 	color: #000;
 }
 
@@ -1644,6 +1709,7 @@ header nav.showing {
 		opacity: 1;
 		margin-left: 4.392rem;
 		width: 11.932rem;
+		max-height: 100%;
 	}
 }
 
@@ -1668,10 +1734,15 @@ header nav.showing {
 	}
 }
 
+.featured .cody-menu ul li:hover {
+	background-color: #f7f3f2;
+	color: #ca2706;
+}
+
 .featured .cody-menu.open .dropdown span {
 	-ms-transform: rotate(90deg);
 	    transform: rotate(90deg);
-	transition: 0.5s linear;
+	transition: 0.3s linear;
 }
 
 .featured .cody-menu.open ul {
@@ -1773,7 +1844,7 @@ header nav.showing {
 	align-content: center;
 	align-items: center;
 	justify-content: center;
-	margin: 4.93rem 0;
+	margin: 2.93rem 0;
 	flex-direction: column;
 }
 
@@ -1999,6 +2070,11 @@ header nav.showing {
 	line-height: 1.305em;
 }
 
+.full-shop .info-set p a {
+	font-weight: 700;
+	text-decoration: underline;
+}
+
 .full-shop .info-set .shop-form {
 	display: flex;
 	flex-direction: column;
@@ -2027,7 +2103,7 @@ header nav.showing {
 
 .full-shop .info-set .shop-form .cody-menu .dropdown span {
 	padding: 0.882rem;
-	transition: 0.5s linear;
+	transition: 0.3s linear;
 }
 
 .full-shop .info-set .shop-form .cody-menu .color-ul {
@@ -2043,10 +2119,20 @@ header nav.showing {
 	padding-right: 4.533%;
 }
 
+.full-shop .info-set .shop-form .cody-menu .color-ul li img {
+	padding-top: 20%;
+	padding-left: 10%;
+}
+
+.full-shop .info-set .shop-form .cody-menu .color-ul li img:hover {
+	-ms-transform: scale(1.2);
+	    transform: scale(1.2);
+}
+
 .full-shop .info-set .shop-form .cody-menu.open .dropdown span {
 	-ms-transform: rotate(90deg);
 	    transform: rotate(90deg);
-	transition: 0.5s linear;
+	transition: 0.3s linear;
 }
 
 .full-shop .info-set .shop-form .cody-menu.open .color-ul {
@@ -2315,7 +2401,7 @@ footer .contact .contact-info {
 
 @media screen and (min-width: 768px) {
 	footer .contact .contact-info {
-		padding: 0% 17.529% 0% 0%;
+		padding: 0%;
 	}
 }
 
@@ -2356,6 +2442,12 @@ footer .contact .social-links {
 	display: flex;
 	justify-content: space-between;
 	padding: 11.47% 0rem;
+}
+
+@media screen and (min-width: 768px) {
+	footer .contact .social-links {
+		padding: 11.5% 0% 17% 0%;
+	}
 }
 
 @media screen and (min-width: 375px) {

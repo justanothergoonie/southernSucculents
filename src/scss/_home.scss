@@ -108,6 +108,10 @@ header {
 					border-bottom: solid #ca3203 2px;
 					width: 100%;
 				}
+				a:hover {
+					border-bottom: solid #ca3203 2px;
+					width: 100%;
+				}
 			}
 		}
 		&.showing {
@@ -785,12 +789,14 @@ header {
 				@include bp-large {
 					flex-direction: column-reverse;
 				}
+
 				img {
 					@include iPhone-x {
 						width: 70%;
 						padding-bottom: 0.876rem;
 					}
 				}
+
 				a {
 					@include iPhone-x {
 						width: 54.666%;
@@ -822,6 +828,18 @@ header {
 					right: -11%;
 					transform: skew(20deg, 0deg);
 					z-index: -2;
+				}
+				a:hover {
+					color: #fa4407;
+					background-color: #fff;
+				}
+				a:hover::before {
+					color: #fa4407;
+					background-color: #fff;
+				}
+				a:hover::after {
+					color: #fa4407;
+					background-color: #fff;
 				}
 			}
 			.second-shop {
@@ -871,6 +889,18 @@ header {
 					right: -11%;
 					transform: skew(-20deg, 0deg);
 					z-index: -2;
+				}
+				a:hover {
+					color: #4b858c;
+					background-color: #fff;
+				}
+				a:hover::before {
+					color: #4b858c;
+					background-color: #fff;
+				}
+				a:hover::after {
+					color: #4b858c;
+					background-color: #fff;
 				}
 			}
 		}
@@ -937,6 +967,18 @@ header {
 					@include bp-large {
 					}
 				}
+				a:hover {
+					color: #fda50d;
+					background-color: #fff;
+				}
+				a:hover::before {
+					color: #fda50d;
+					background-color: #fff;
+				}
+				a:hover::after {
+					color: #fda50d;
+					background-color: #fff;
+				}
 			}
 			.fourth-shop {
 				@include flex-center;
@@ -989,6 +1031,18 @@ header {
 					z-index: -2;
 					@include bp-large {
 					}
+				}
+				a:hover {
+					color: #a1bbab;
+					background-color: #fff;
+				}
+				a:hover::before {
+					color: #a1bbab;
+					background-color: #fff;
+				}
+				a:hover::after {
+					color: #a1bbab;
+					background-color: #fff;
 				}
 			}
 		}
@@ -1050,7 +1104,7 @@ header {
 			span {
 				align-self: right;
 				margin: auto 0;
-				transition: 0.5s linear;
+				transition: 0.3s linear;
 				color: #000;
 			}
 		}
@@ -1065,6 +1119,7 @@ header {
 				opacity: 1;
 				margin-left: 4.392rem;
 				width: 11.932rem;
+				max-height: 100%;
 			}
 			li {
 				display: flex;
@@ -1083,12 +1138,16 @@ header {
 					padding-bottom: 0.47rem;
 				}
 			}
+			li:hover {
+				background-color: #f7f3f2;
+				color: #ca2706;
+			}
 		}
 		&.open {
 			.dropdown {
 				span {
 					transform: rotate(90deg);
-					transition: 0.5s linear;
+					transition: 0.3s linear;
 				}
 			}
 			ul {
@@ -1160,7 +1219,7 @@ header {
 	}
 	div {
 		@include flex-center;
-		margin: 4.93rem 0;
+		margin: 2.93rem 0;
 		flex-direction: column;
 		@include bp-med {
 			width: 33.333%;
@@ -1320,6 +1379,10 @@ header {
 			font-size: 1.375rem;
 			margin: 2rem 4rem;
 			line-height: 1.305em;
+			a {
+				font-weight: 700;
+				text-decoration: underline;
+			}
 		}
 		.shop-form {
 			display: flex;
@@ -1342,7 +1405,7 @@ header {
 					}
 					span {
 						padding: 0.882rem;
-						transition: 0.5s linear;
+						transition: 0.3s linear;
 					}
 				}
 				.color-ul {
@@ -1354,13 +1417,20 @@ header {
 					max-height: 0;
 					li {
 						padding-right: 4.533%;
+						img {
+							padding-top: 20%;
+							padding-left: 10%;
+						}
+						img:hover {
+							transform: scale(1.2);
+						}
 					}
 				}
 				&.open {
 					.dropdown {
 						span {
 							transform: rotate(90deg);
-							transition: 0.5s linear;
+							transition: 0.3s linear;
 						}
 					}
 					.color-ul {
@@ -1560,7 +1630,7 @@ footer {
 				padding: 15% 0% 17.529% 5%;
 			}
 			@include bp-med {
-				padding: 0% 17.529% 0% 0%;
+				padding: 0%;
 			}
 
 			.contacts {
@@ -1595,6 +1665,9 @@ footer {
 			display: flex;
 			justify-content: space-between;
 			padding: 11.47% 0rem;
+			@include bp-med {
+				padding: 11.5% 0% 17% 0%;
+			}
 			img {
 				@include iPhone-x {
 					width: 3rem;
@@ -1696,11 +1769,3 @@ footer {
 	color: #fa4407 !important;
 	background-color: #eee;
 }
-// .slick-dots {
-// 	height: 15px;
-// 	width: 15px;
-// 	// background: rgb(203, 6, 6);
-// 	border-radius: 50px;
-// 	display: inline-block;
-// 	box-shadow: 0px 0px 4px gray inset;
-// }
