@@ -758,10 +758,11 @@ header {
 			font-size: 1.2rem;
 		}
 		@include bp-large {
-			align-items: end;
+			align-items: stretch;
 			justify-content: space-evenly;
 			flex-direction: row;
 			padding-top: 3.31%;
+			display: flex;
 		}
 		.first-set-container {
 			display: flex;
@@ -775,8 +776,8 @@ header {
 				flex-direction: row;
 			}
 			@include bp-large {
-				padding-right: 4.02%;
-				align-items: end;
+				// padding-right: 4.02%;
+				align-items: stretch;
 			}
 			.first-shop {
 				@include flex-center;
@@ -784,10 +785,17 @@ header {
 
 				@include iPhone-x {
 					width: 50%;
+					span {
+						display: none;
+					}
 				}
 
 				@include bp-large {
 					flex-direction: column-reverse;
+					justify-content: space-between;
+					span {
+						display: block;
+					}
 				}
 
 				img {
@@ -847,10 +855,17 @@ header {
 				flex-direction: column;
 				@include iPhone-x {
 					width: 50%;
+					span {
+						display: none;
+					}
 				}
 
 				@include bp-large {
 					flex-direction: column-reverse;
+					justify-content: space-between;
+					span {
+						display: block;
+					}
 				}
 				img {
 					@include iPhone-x {
@@ -912,17 +927,24 @@ header {
 				width: 100%;
 			}
 			@include bp-large {
-				align-items: end;
+				align-items: unset;
 			}
 			.third-shop {
 				@include flex-center;
 				flex-direction: column;
 				@include iPhone-x {
 					width: 50%;
+					span {
+						display: none;
+					}
 				}
 
 				@include bp-large {
 					flex-direction: column-reverse;
+					justify-content: space-between;
+					span {
+						display: block;
+					}
 				}
 				img {
 					@include iPhone-x {
@@ -985,10 +1007,17 @@ header {
 				flex-direction: column;
 				@include iPhone-x {
 					width: 50%;
+					span {
+						display: none;
+					}
 				}
 
 				@include bp-large {
 					flex-direction: column-reverse;
+					justify-content: space-between;
+					span {
+						display: block;
+					}
 				}
 				img {
 					@include iPhone-x {
@@ -1072,7 +1101,7 @@ header {
 	}
 }
 .plants-banner {
-	background-image: url(/dist/img/trangles1.png);
+	background-image: url(../../dist/img/trangles1.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	img {
@@ -1091,7 +1120,7 @@ header {
 			display: flex;
 			height: 2.315rem;
 			justify-content: center;
-			background-color: #ca2706;
+			background-color: #e95829;
 			@include bp-med {
 				display: none;
 			}
@@ -1126,7 +1155,7 @@ header {
 				font-weight: regular;
 				color: black;
 				justify-content: center;
-				background-color: #ca2706;
+				background-color: #e95829;
 				border-top: 1px solid black;
 				@include bp-med {
 					background-color: rgba(0, 0, 0, 0);
@@ -1136,11 +1165,15 @@ header {
 					font-size: 1.25rem;
 					font-weight: 300;
 					padding-bottom: 0.47rem;
+					&.active {
+						color: #e95829;
+						font-weight: 800;
+					}
 				}
 			}
 			li:hover {
 				background-color: #f7f3f2;
-				color: #ca2706;
+				color: #e95829;
 			}
 		}
 		&.open {
@@ -1262,7 +1295,7 @@ header {
 }
 .mobile-hero {
 	display: flex;
-	background-image: url(/dist/img/trangles1.png);
+	background-image: url(../../dist/img/trangles1.png);
 	background-repeat: no-repeat;
 	background-position: top left;
 	background-size: contain;
@@ -1299,7 +1332,7 @@ header {
 	flex-direction: column;
 	font-family: 'Roboto', sans-serif;
 	@include bp-med {
-		background-image: url(/dist/img/trangles1.png);
+		background-image: url(../../dist/img/trangles1.png);
 		background-repeat: no-repeat;
 		background-position: top left;
 		background-size: 30%;
@@ -1589,7 +1622,7 @@ header {
 //end shop page
 footer {
 	background-color: #dcd0cf;
-	background-image: url(/dist/img/triangles2.png);
+	background-image: url(../../dist/img/triangles2.png);
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	@include flex-center;

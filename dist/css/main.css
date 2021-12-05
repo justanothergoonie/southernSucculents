@@ -1234,10 +1234,11 @@ header nav.showing {
 
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container {
-		align-items: end;
+		align-items: stretch;
 		justify-content: space-evenly;
 		flex-direction: row;
 		padding-top: 3.31%;
+		display: flex;
 	}
 }
 
@@ -1262,8 +1263,7 @@ header nav.showing {
 
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container .first-set-container {
-		padding-right: 4.02%;
-		align-items: end;
+		align-items: stretch;
 	}
 }
 
@@ -1279,11 +1279,18 @@ header nav.showing {
 	.shop-by .all-shop-container .first-set-container .first-shop {
 		width: 50%;
 	}
+	.shop-by .all-shop-container .first-set-container .first-shop span {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container .first-set-container .first-shop {
 		flex-direction: column-reverse;
+		justify-content: space-between;
+	}
+	.shop-by .all-shop-container .first-set-container .first-shop span {
+		display: block;
 	}
 }
 
@@ -1363,11 +1370,18 @@ header nav.showing {
 	.shop-by .all-shop-container .first-set-container .second-shop {
 		width: 50%;
 	}
+	.shop-by .all-shop-container .first-set-container .second-shop span {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container .first-set-container .second-shop {
 		flex-direction: column-reverse;
+		justify-content: space-between;
+	}
+	.shop-by .all-shop-container .first-set-container .second-shop span {
+		display: block;
 	}
 }
 
@@ -1449,7 +1463,7 @@ header nav.showing {
 
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container .second-set-container {
-		align-items: end;
+		align-items: unset;
 	}
 }
 
@@ -1465,11 +1479,18 @@ header nav.showing {
 	.shop-by .all-shop-container .second-set-container .third-shop {
 		width: 50%;
 	}
+	.shop-by .all-shop-container .second-set-container .third-shop span {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container .second-set-container .third-shop {
 		flex-direction: column-reverse;
+		justify-content: space-between;
+	}
+	.shop-by .all-shop-container .second-set-container .third-shop span {
+		display: block;
 	}
 }
 
@@ -1550,11 +1571,18 @@ header nav.showing {
 	.shop-by .all-shop-container .second-set-container .fourth-shop {
 		width: 50%;
 	}
+	.shop-by .all-shop-container .second-set-container .fourth-shop span {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 1024px) {
 	.shop-by .all-shop-container .second-set-container .fourth-shop {
 		flex-direction: column-reverse;
+		justify-content: space-between;
+	}
+	.shop-by .all-shop-container .second-set-container .fourth-shop span {
+		display: block;
 	}
 }
 
@@ -1648,7 +1676,7 @@ header nav.showing {
 }
 
 .plants-banner {
-	background-image: url(/dist/img/trangles1.png);
+	background-image: url(../../dist/img/trangles1.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -1673,7 +1701,7 @@ header nav.showing {
 	display: flex;
 	height: 2.315rem;
 	justify-content: center;
-	background-color: #ca2706;
+	background-color: #e95829;
 }
 
 @media screen and (min-width: 768px) {
@@ -1718,7 +1746,7 @@ header nav.showing {
 	font-weight: regular;
 	color: black;
 	justify-content: center;
-	background-color: #ca2706;
+	background-color: #e95829;
 	border-top: 1px solid black;
 }
 
@@ -1732,11 +1760,15 @@ header nav.showing {
 		font-weight: 300;
 		padding-bottom: 0.47rem;
 	}
+	.featured .cody-menu ul li.active {
+		color: #e95829;
+		font-weight: 800;
+	}
 }
 
 .featured .cody-menu ul li:hover {
 	background-color: #f7f3f2;
-	color: #ca2706;
+	color: #e95829;
 }
 
 .featured .cody-menu.open .dropdown span {
@@ -1906,7 +1938,7 @@ header nav.showing {
 
 .mobile-hero {
 	display: flex;
-	background-image: url(/dist/img/trangles1.png);
+	background-image: url(../../dist/img/trangles1.png);
 	background-repeat: no-repeat;
 	background-position: top left;
 	background-size: contain;
@@ -1957,7 +1989,7 @@ header nav.showing {
 
 @media screen and (min-width: 768px) {
 	.full-shop {
-		background-image: url(/dist/img/trangles1.png);
+		background-image: url(../../dist/img/trangles1.png);
 		background-repeat: no-repeat;
 		background-position: top left;
 		background-size: 30%;
@@ -2335,7 +2367,7 @@ header nav.showing {
 
 footer {
 	background-color: #dcd0cf;
-	background-image: url(/dist/img/triangles2.png);
+	background-image: url(../../dist/img/triangles2.png);
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	display: flex;
